@@ -229,5 +229,16 @@
   "nav.dd.associated": "関連",
   "nav.dd.discography": "ディスコグラフィー",
   "nav.dd.artists": "アーティスト",
-  "nav.dd.all": "← すべて"
+  "nav.dd.all": "← すべて",
+  "artist.jehane.disc_label": "ディスコグラフィー",
+  "artist.jehane.disc1": "Exótica（2016年、ユニバーサルミュージック）",
+  "artist.jehane.disc1desc": "全曲自作のアルバム：MPB、ボサノバ、インディー、ワールドミュージックにアラブの要素（デルバック、ウード、ライ）を融合。フランス語の曲「Je Ne Veux Plus」で締めくくられる。",
+  "artist.jehane.press_label": "プレス",
+  "artist.jehane.q1": "「彼女の作品はポップ、ロック、そしてライなどの東洋の音を融合し、電子音楽の音色を持つオリジナルのワールドミュージックを生み出している。」",
+  "artist.jehane.q1src": "Jornal O Globo",
+  "artist.jehane.q2": "「曲は深く心を打つ…魅惑的で催眠的な声で歌われるジェハネの歌詞は容易に理解できる。彼女はどうやってそれを成し遂げたのか？ すべての才能と感情をたった一枚のアルバムに注ぎ込んだのだ。」",
+  "artist.jehane.q2src": "ニイ・フォテ — アメリカの音楽ジャーナリスト（『Exótica』評）",
+  "artist.jehane.follow_label": "フォロー",
+  "artist.jehane.website": "公式サイト",
+  "artist.jehane.insta": "インスタグラム"
 }

@@ -229,5 +229,16 @@
   "nav.dd.associated": "Associated",
   "nav.dd.discography": "Discography",
   "nav.dd.artists": "Artists",
-  "nav.dd.all": "← All releases"
+  "nav.dd.all": "← All releases",
+  "artist.jehane.disc_label": "Discography",
+  "artist.jehane.disc1": "Exótica (2016, Universal Music)",
+  "artist.jehane.disc1desc": "A completely self-written album: MPB, bossa nova, indie and world music with Arabic elements — derbak, oud, Rai. It closes with the French-language track “Je Ne Veux Plus”.",
+  "artist.jehane.press_label": "Press",
+  "artist.jehane.q1": "“Her work fuses POP, ROCK and oriental sonorities such as Rai, creating an authorial World Music work with electronic music timbres.”",
+  "artist.jehane.q1src": "Jornal O Globo",
+  "artist.jehane.q2": "“The songs are deeply moving... It is easy to understand the lyrics sung by Jehane with her captivating and hypnotic voice. How could she do it? Putting all her talents and emotions into a single album.”",
+  "artist.jehane.q2src": "Niyi Fote — US music journalist, on “Exótica”",
+  "artist.jehane.follow_label": "Follow",
+  "artist.jehane.website": "Official website",
+  "artist.jehane.insta": "Instagram"
 }

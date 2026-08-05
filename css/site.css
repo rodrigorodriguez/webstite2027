@@ -685,7 +685,10 @@ a { color: inherit; }
   min-width: 260px; background: var(--bg-elevated); border: 1px solid var(--border);
   border-radius: 14px; padding: 10px; box-shadow: 0 18px 40px rgba(0,0,0,.35); z-index: 60;
 }
-.dropdown:hover .dropdown-menu { display: block; }
+.dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
+.dropdown-menu::before {
+  content: ""; position: absolute; top: -10px; left: 0; right: 0; height: 10px;
+}
 .dropdown-menu a {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   padding: 9px 12px; border-radius: 9px; color: var(--fg); font-size: 14px; text-decoration: none;
@@ -717,3 +720,8 @@ a { color: inherit; }
   .t-head { flex-direction: column; align-items: flex-start; gap: 2px; }
   .t-head h3 { font-size: 16px; margin-bottom: 3px; }
 }
+
+.sec-title { font-family: var(--font-display); font-size: 24px; margin: 48px 0 16px; color: var(--fg); }
+.quote { margin: 0 0 18px; padding: 18px 22px; border-left: 3px solid var(--accent); background: var(--bg-soft); border-radius: 0 12px 12px 0; }
+.quote p { margin: 0 0 8px; color: var(--fg-muted); font-style: italic; line-height: 1.7; }
+.quote footer { color: var(--fg-dim); font-size: 13px; }

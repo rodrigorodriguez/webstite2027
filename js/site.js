@@ -116,3 +116,39 @@
   };
   window.__currentLang=function(){return lang;};
 })();
+
+(function(){
+  function closeMenus(except){
+    document.querySelectorAll('.dropdown.open').forEach(function(d){
+      if(d!==except) d.classList.remove('open');
+    });
+  }
+  document.addEventListener('click',function(e){
+    var dd=e.target.closest('.dropdown');
+    var trig=e.target.closest('.dropdown-trigger');
+    if(trig){
+      var p=trig.parentElement;
+      var willOpen=!p.classList.contains('open');
+      closeMenus(p);
+      if(willOpen) p.classList.add('open');
+      e.preventDefault();
+      return;
+    }
+    if(dd){
+      closeMenus();
+      return;
+    }
+    closeMenus();
+  });
+  document.addEventListener('mouseover',function(e){
+    var dd=e.target.closest('.dropdown');
+    closeMenus(dd);
+    if(dd) dd.classList.add('open');
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeMenus();
+  });
+  document.addEventListener('htmx:afterSwap',function(){
+    closeMenus();
+  });
+})();

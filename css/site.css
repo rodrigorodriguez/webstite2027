@@ -698,3 +698,22 @@ a { color: inherit; }
 
 .mob-group { color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-size: 12px; margin: 18px 0 4px; }
 .mobile-overlay-inner a { font-size: 15px; font-weight: 500; }
+
+.timeline { position: relative; max-width: 780px; margin: 0 auto; padding-left: 8px; }
+.timeline::before { content: ''; position: absolute; left: 27px; top: 6px; bottom: 6px; width: 2px; background: var(--border); }
+.t-item { position: relative; padding-left: 62px; margin-bottom: 26px; }
+.t-dot { position: absolute; left: 18px; top: 30px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); border: 4px solid var(--bg-elevated); box-shadow: 0 0 0 2px var(--accent); }
+.t-card { display: grid; grid-template-columns: 96px 1fr; gap: 18px; align-items: center; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 14px; padding: 12px 16px 12px 12px; color: var(--fg); transition: transform .18s ease, border-color .18s ease; }
+.t-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.t-card img { width: 96px; height: 96px; object-fit: cover; border-radius: 10px; display: block; }
+.t-body { min-width: 0; }
+.t-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.t-head h3 { margin: 0 0 6px; font-size: 19px; }
+.t-year { color: var(--accent); font-size: 13px; letter-spacing: 1.5px; white-space: nowrap; }
+.t-body p { margin: 0; color: var(--fg-muted); font-size: 13.5px; line-height: 1.55; }
+@media (max-width: 520px) {
+  .t-card { grid-template-columns: 72px 1fr; padding: 10px 12px 10px 10px; }
+  .t-card img { width: 72px; height: 72px; }
+  .t-head { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .t-head h3 { font-size: 16px; margin-bottom: 3px; }
+}

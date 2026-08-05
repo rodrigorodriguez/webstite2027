@@ -41,6 +41,19 @@
         if (e.target.closest('#mobile-overlay a')) o.classList.remove('open');
       });
     }
+    var ls = document.getElementById('lang-select');
+    if (ls && !ls._listening) {
+      ls._listening = true;
+      ls.addEventListener('change', function() {
+        if (window.__switchLang) window.__switchLang(this.value);
+      });
+    }
+    if (window.__apply) window.__apply();
+    if (window.__currentLang) {
+      var l = window.__currentLang();
+      var sel = document.getElementById('lang-select');
+      if (sel) sel.value = l;
+    }
   }
 
   bindCommon();

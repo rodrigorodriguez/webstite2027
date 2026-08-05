@@ -125,17 +125,16 @@
   }
   document.addEventListener('click',function(e){
     var dd=e.target.closest('.dropdown');
+    if(!dd){
+      closeMenus();
+      return;
+    }
     var trig=e.target.closest('.dropdown-trigger');
     if(trig){
       var p=trig.parentElement;
       var willOpen=!p.classList.contains('open');
       closeMenus(p);
       if(willOpen) p.classList.add('open');
-      e.preventDefault();
-      return;
-    }
-    if(dd){
-      closeMenus();
       return;
     }
     closeMenus();

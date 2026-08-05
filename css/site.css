@@ -381,6 +381,25 @@ a { color: inherit; }
 
 .press-open:hover { text-decoration: underline; }
 
+.press-gallery {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  margin-top: 24px;
+}
+
+.press-clip {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.press-clip img { width: 100%; display: block; aspect-ratio: 3/4; object-fit: cover; }
+
+.press-clip:hover { transform: translateY(-2px); border-color: var(--accent); }
+
 /* ---------- Album detail ---------- */
 
 .album-hero {

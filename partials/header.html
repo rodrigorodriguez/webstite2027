@@ -1,14 +1,43 @@
 <header class="site-header" role="banner">
 <div class="header-inner">
   <a href="/" class="logo-profile notranslate">
-    <img src="/images/logo.png" alt="Rodrigo Rodriguez" width="40" height="40">
+    <img src="/images/rodrigo-rodriguez-1001b.jpg" alt="Rodrigo Rodriguez" width="40" height="40">
     <span class="logo-name">Rodrigo Rodriguez</span>
   </a>
   <nav class="nav-desktop" aria-label="Primary navigation" role="navigation">
     <a href="https://open.spotify.com/artist/0eboxDIonOTXPoxweMT1qD" target="_blank" rel="noopener" data-i18n="nav.listen">Listen</a>
-    <a href="/discography" data-i18n="nav.discography">Discography</a>
+    <div class="dropdown">
+      <button class="dropdown-trigger" data-i18n="nav.dd.discography">Discography</button>
+      <div class="dropdown-menu">
+        <div class="dd-group-label" data-i18n="nav.dd.solo">Solo</div>
+        <a href="/discography/primitive-instrumentals"><span>Primitive Instrumentals</span><em data-i18n="disc.primitive-year">1998</em></a>
+        <a href="/discography/regra-zero"><span data-i18n="disc.regra">Regra Zero</span><em data-i18n="disc.regra-year">2005</em></a>
+        <a href="/discography/linha-do-tempo"><span data-i18n="disc.linha">Linha do Tempo</span><em data-i18n="disc.linha-year">2016</em></a>
+        <a href="/discography/disrupcao"><span data-i18n="disc.disrupcao">Disrupção</span><em data-i18n="disc.disrupcao-year">2020</em></a>
+        <div class="dd-divider"></div>
+        <div class="dd-group-label" data-i18n="nav.dd.associated">Associated</div>
+        <a href="/discography/logx"><span data-i18n="disc.logx">LogX</span><em data-i18n="disc.logx-year">1998</em></a>
+        <a href="/discography/roberto-ferreira-celso-esteves"><span data-i18n="disc.roberto">Roberto Ferreira &amp; Celso Esteves</span><em data-i18n="disc.roberto-year">1999</em></a>
+        <a href="/discography/rodrigo-quik-nao-e-mais-um-disco-de-amor"><span data-i18n="disc.nao">Não É Mais Um Disco De Amor</span><em data-i18n="disc.nao-year">2007</em></a>
+        <a href="/discography/rodrigo-quik-ame"><span data-i18n="disc.ame">A.M.E — Rodrigo Quik</span><em data-i18n="disc.ame-year">2009</em></a>
+        <a href="/discography/do-brasil"><span data-i18n="disc.brasil">Do Brasil — Moína</span><em data-i18n="disc.brasil-year">2010</em></a>
+      </div>
+    </div>
     <a href="/photo-video" data-i18n="nav.media">Media</a>
-    <a href="/artists" data-i18n="nav.artists">Artists</a>
+    <div class="dropdown">
+      <button class="dropdown-trigger" data-i18n="nav.dd.artists">Artists</button>
+      <div class="dropdown-menu dropdown-menu-artists">
+        <a href="/artists/celso-esteves">Celso Esteves</a>
+        <a href="/artists/gui-salgueiro">Guilherme Salgueiro</a>
+        <a href="/artists/cleidisleia">Cleidisleia</a>
+        <a href="/artists/roberto-ferreira">Roberto Ferreira</a>
+        <a href="/artists/rodrigo-garcia">Rodrigo Garcia</a>
+        <a href="/artists/rodrigo-cosenza">Rodrigo Cosenza</a>
+        <a href="/artists/jehane-saade">Jehane Saade</a>
+        <a href="/artists/ygor-helbourn">Ygor Helbourn</a>
+        <a href="/artists/yuri-helbourn">Yuri Helbourn</a>
+      </div>
+    </div>
     <a href="/press" data-i18n="nav.press">Press</a>
     <a href="/contact" data-i18n="nav.contact">Contact</a>
   </nav>
@@ -37,9 +66,28 @@
   <div class="mobile-overlay-inner">
     <button class="mobile-overlay-close" id="mobile-overlay-close" data-i18n="nav.close">Close</button>
     <a href="https://open.spotify.com/artist/0eboxDIonOTXPoxweMT1qD" target="_blank" rel="noopener" data-i18n="nav.listen">Listen</a>
-    <a href="/discography" data-i18n="nav.discography">Discography</a>
+    <div class="mob-group" data-i18n="nav.dd.discography">Discography</div>
+    <a href="/discography" data-i18n="nav.dd.all">← All releases</a>
+    <a href="/discography/primitive-instrumentals">Primitive Instrumentals</a>
+    <a href="/discography/regra-zero" data-i18n="disc.regra">Regra Zero</a>
+    <a href="/discography/linha-do-tempo" data-i18n="disc.linha">Linha do Tempo</a>
+    <a href="/discography/disrupcao" data-i18n="disc.disrupcao">Disrupção</a>
+    <a href="/discography/logx" data-i18n="disc.logx">LogX</a>
+    <a href="/discography/roberto-ferreira-celso-esteves" data-i18n="disc.roberto">Roberto Ferreira &amp; Celso Esteves</a>
+    <a href="/discography/rodrigo-quik-nao-e-mais-um-disco-de-amor" data-i18n="disc.nao">Não É Mais Um Disco De Amor</a>
+    <a href="/discography/rodrigo-quik-ame" data-i18n="disc.ame">A.M.E — Rodrigo Quik</a>
+    <a href="/discography/do-brasil" data-i18n="disc.brasil">Do Brasil — Moína</a>
+    <div class="mob-group" data-i18n="nav.dd.artists">Artists</div>
+    <a href="/artists/celso-esteves">Celso Esteves</a>
+    <a href="/artists/gui-salgueiro">Guilherme Salgueiro</a>
+    <a href="/artists/cleidisleia">Cleidisleia</a>
+    <a href="/artists/roberto-ferreira">Roberto Ferreira</a>
+    <a href="/artists/rodrigo-garcia">Rodrigo Garcia</a>
+    <a href="/artists/rodrigo-cosenza">Rodrigo Cosenza</a>
+    <a href="/artists/jehane-saade">Jehane Saade</a>
+    <a href="/artists/ygor-helbourn">Ygor Helbourn</a>
+    <a href="/artists/yuri-helbourn">Yuri Helbourn</a>
     <a href="/photo-video" data-i18n="nav.media">Media</a>
-    <a href="/artists" data-i18n="nav.artists">Artists</a>
     <a href="/press" data-i18n="nav.press">Press</a>
     <a href="/contact" data-i18n="nav.contact">Contact</a>
     <button class="theme-toggle" id="mobile-theme-btn" aria-label="Toggle theme" style="margin-top:12px;align-self:flex-start">

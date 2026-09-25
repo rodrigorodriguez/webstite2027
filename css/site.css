@@ -13,7 +13,7 @@
   --bg-elevated: #121a28;
   --fg: #e8eef7;
   --fg-muted: #97a3b6;
-  --fg-dim: #64748b;
+  --fg-dim: #8697ad;
   --accent: #22d3ee;
   --accent-soft: #67e8f9;
   --accent-dim: #0e5f75;
@@ -1943,4 +1943,10 @@ body::-webkit-scrollbar-thumb {
 [data-cosmic="1"] .album-cover {
   border-color: rgba(34, 211, 238, 0.4);
   box-shadow: 0 22px 56px rgba(0, 0, 0, 0.4), 0 0 30px rgba(7, 79, 183, 0.28);
+}
+
+.footer-h3 {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--fg-muted); margin: 0 0 14px;
 }

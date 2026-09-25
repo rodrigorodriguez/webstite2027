@@ -28,7 +28,7 @@
 <link href="/css/site.css" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 <a href="#main-content" class="sr-only skip-link" data-i18n="skip_link">Skip to content</a>
@@ -71,44 +71,32 @@
       </div>
     </section>
 
-    <section class="section-tight" style="padding-bottom:96px">
-      <h2 class="section-kicker" style="letter-spacing:.3em" data-i18n="album.lyrics">Lyrics</h2>
-      <div class="lyrics">
-        <h3>As Melhores Coisas da Vida</h3>
-        <p>Está na hora de você acordar
-Olhar em volta e ver o que há
-Lá fora e ai dentro o que sente
-É sua alma em estado latente
-
-Por que você se deixa levar?
-Sem perceber onde a culpa está
-Aceitando tudo o que está vendo
-Não ligando pros enfermos
-
-Não me obrigue a admitir
-Que tenho coisas a fazer por aqui
-Quero curtir as melhores coisas da vida
-E do trabalho quero fugir
-
-Porque você tenta revocar?
-Os direitos que tem de explicar
-A calúnia que não deu conta do recado
-E se importa com os fatos do passado
-
-Não me obrigue a admitir
-Que tenho coisas a fazer por aqui
-Quero curtir as melhores coisas da vida
-E do trabalho quero fugir
-
-Não é hora de você partir
-Dizer adeus pra tudo e desistir
-Lá fora está cheio de gente
-Que liga pros seus atos delinqüentes
-
-Não me obrigue a admitir
-Que tenho coisas a fazer por aqui
-Quero curtir as melhores coisas da vida
-E do trabalho quero fugir</p>
+    <section class="section-tight" id="lyrics">
+      <div class="section-head">
+        <h2 data-i18n="album.lyrics">Lyrics</h2>
+        <p data-i18n="album.lyrics-hint">Select a track in the console. Use arrow keys to move through the songs.</p>
+      </div>
+      <div class="lyr-console" role="group" aria-label="Lyrics console">
+        <div class="lyr-side">
+          <div class="lyr-side-head" data-i18n="album.tracks-label">Tracks</div>
+          <div class="lyr-index" role="tablist">
+            <button class="lyr-idx-item" type="button" data-title="As Melhores Coisas da Vida" data-lyrics="Está na hora de você acordar Olhar em volta e ver o que há Lá fora e ai dentro o que sente É sua alma em estado latente Por que você se deixa levar? Sem perceber onde a culpa está Aceitando tudo o que está vendo Não ligando pros enfermos Não me obrigue a admitir Que tenho coisas a fazer por aqui Quero curtir as melhores coisas da vida E do trabalho quero fugir Porque você tenta revocar? Os direitos que tem de explicar A calúnia que não deu conta do recado E se importa com os fatos do passado Não me obrigue a admitir Que tenho coisas a fazer por aqui Quero curtir as melhores coisas da vida E do trabalho quero fugir Não é hora de você partir Dizer adeus pra tudo e desistir Lá fora está cheio de gente Que liga pros seus atos delinqüentes Não me obrigue a admitir Que tenho coisas a fazer por aqui Quero curtir as melhores coisas da vida E do trabalho quero fugir"><span class="n">01</span><span>As Melhores Coisas da Vida</span></button>
+          </div>
+        </div>
+        <div class="lyr-stage-wrap">
+          <div class="lyr-hud">
+            <span class="lyr-pos">1 / 1</span>
+            <div class="lyr-nav">
+              <button type="button" data-lyr="prev" aria-label="Previous track">&#9650;</button>
+              <button type="button" data-lyr="next" aria-label="Next track">&#9660;</button>
+            </div>
+          </div>
+          <div class="lyr-progress"><i style="width:100.0%"></i></div>
+          <div class="lyr-stage">
+            <h3 class="lyr-track-title"></h3>
+            <div class="lyr-text"></div>
+          </div>
+        </div>
       </div>
     </section>
   </div>

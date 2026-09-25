@@ -16,9 +16,9 @@
   "nav.lang-zh": "中文",
   "home.title": "Rodrigo Rodriguez 吉他手与作曲家",
   "home.desc": "来自里约热内卢的吉他手和作曲家。专辑 Disrupção，与 Guilherme Salgueiro 和 Ygor Helbourn 组成的音乐三重奏。",
-  "home.hero-kicker": "新专辑现已发行",
+  "home.hero-kicker": "Disrupção · 正在发行",
   "home.hero-title": "Disrupção",
-  "home.hero-sub": "这张专辑挑战期待 Rodrigo Rodriguez、Guilherme Salgueiro 和 Ygor Helbourn 二十年音乐合作的结晶。",
+  "home.hero-sub": "吉他、人声与里约场景的密码。与 Guilherme Salgueiro、Ygor Helbourn 二十年的合作，凝聚于《Disrupção》。",
   "home.listen-spotify": "在 Spotify 上收听",
   "home.browse-discography": "浏览专辑作品",
   "home.bio-kicker": "关于艺术家",
@@ -29,7 +29,7 @@
   "home.bio-4": "Rodrigo、Guilherme 和 Ygor 携手近 20 年，通过他们在 Regra Zero 的共同旅程以及 Rodrigo 的多个艺术项目 如与 Moína Lima（Taiguara 之女）合作的 Do Brasil，以及 Rodrigo Quik 的个人项目（Perdidos na Selva） 塑造了他们的音乐。在“Disrupção”中，这次合作达到了新的水平，音乐人之间的默契化为富有创意的贝斯线和精准的鼓点，完美契合 Rodrigo Rodriguez 引人入胜的创作。他们多年未见，没有一起排练，录制出的正是他们听到的、Rodrigo 和 Cleidisleia 几天前录制的样带。",
   "home.bio-5": "“Disrupção”与 Cleidisleia 合作制作，她也演奏小提琴和民间小提琴，这张专辑是 Rodrigo Rodriguez 音乐创新的见证。Cleidisleia、Guilherme Salgueiro、Yuri Helbourn 和 Ygor Helbourn 增添了丰富的声层 正是“Disrupção”这首曲目凸显了 Rodrigo 吉他与嗓音之间关系的真谛。",
   "home.listen-title": "聆听",
-  "home.listen-sub": "在 Spotify 上流媒体播放专辑，在 YouTube 上观看演出。",
+  "home.listen-sub": "流媒体收听专辑，观看现场演出。",
   "disc.title": "专辑作品 Rodrigo Rodriguez",
   "disc.desc": "吉他手兼作曲家 Rodrigo Rodriguez 的完整专辑目录：1998 年至 2020 年的个人专辑与合作作品。",
   "disc.h1": "专辑作品",
@@ -307,5 +307,7 @@
   "book.corno.page-title": "Melhor Ser Corno do Que Feminicida | 书册 | Rodrigo Rodriguez",
   "book.preface": "前言",
   "book.preface-note": "葡萄牙语原文节选。",
-  "book.read-preface": "阅读前言"
+  "book.read-preface": "阅读前言",
+  "album.lyrics-hint": "在控制台中选择曲目。使用方向键在歌曲之间切换。",
+  "album.tracks-label": "曲目"
 }

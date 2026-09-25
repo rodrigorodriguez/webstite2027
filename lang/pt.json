@@ -16,9 +16,9 @@
   "nav.lang-zh": "中文",
   "home.title": "Rodrigo Rodriguez Guitarrista e Compositor",
   "home.desc": "Guitarrista e compositor do Rio de Janeiro. O álbum Disrupção, uma tríade musical com Guilherme Salgueiro e Ygor Helbourn.",
-  "home.hero-kicker": "Novo álbum disponível",
+  "home.hero-kicker": "Disrupção · nas plataformas",
   "home.hero-title": "Disrupção",
-  "home.hero-sub": "O álbum que desafia as expectativas duas décadas de parceria musical entre Rodrigo Rodriguez, Guilherme Salgueiro e Ygor Helbourn.",
+  "home.hero-sub": "Violão, voz e o código da cena carioca. Duas décadas de parceria com Guilherme Salgueiro e Ygor Helbourn, destiladas em Disrupção.",
   "home.listen-spotify": "Ouça no Spotify",
   "home.browse-discography": "Explore a discografia",
   "home.bio-kicker": "Sobre o artista",
@@ -29,7 +29,7 @@
   "home.bio-4": "Rodrigo, Guilherme e Ygor, juntos há quase 20 anos, moldaram sua música ao longo de uma jornada musical compartilhada no Regra Zero e em várias frentes artísticas de Rodrigo como Do Brasil com Moína Lima (filha de Taiguara) e projetos solo de Rodrigo Quik (Perdidos na Selva). Em “Disrupção”, essa colaboração atinge um novo patamar, onde a familiaridade entre os músicos se traduz em linhas de baixo inventivas e uma bateria precisa que se encaixam perfeitamente nas composições envolventes de Rodrigo Rodriguez. Eles não se encontravam há anos, não ensaiaram juntos e gravaram do jeito que ouviram uma demo gravada por Rodrigo e Cleidisleia dias antes.",
   "home.bio-5": "Produzido em colaboração com Cleidisleia que também toca violino e rabeca, “Disrupção” é um testemunho da inovação musical de Rodrigo Rodriguez. Cleidisleia, Guilherme Salgueiro, Yuri Helbourn e Ygor Helbourn acrescentam camadas sonoras ricas, é a faixa “Disrupção” que coloca em evidência a verdadeira essência da relação entre a guitarra e a voz de Rodrigo.",
   "home.listen-title": "Ouça",
-  "home.listen-sub": "Streaming dos álbuns no Spotify e performances no YouTube.",
+  "home.listen-sub": "Ouça os álbuns e assista às performances.",
   "disc.title": "Discografia Rodrigo Rodriguez",
   "disc.desc": "Discografia completa do guitarrista e compositor Rodrigo Rodriguez: álbuns solo e colaborações de 1998 a 2020.",
   "disc.h1": "Discografia",
@@ -307,5 +307,7 @@
   "book.corno.page-title": "Melhor Ser Corno do Que Feminicida | Livros | Rodrigo Rodriguez",
   "book.preface": "Prefácio",
   "book.preface-note": "Trecho no original em português.",
-  "book.read-preface": "Ler o prefácio"
+  "book.read-preface": "Ler o prefácio",
+  "album.lyrics-hint": "Escolha uma faixa no console. Use as setas do teclado para navegar pelas músicas.",
+  "album.tracks-label": "Faixas"
 }

@@ -17,9 +17,9 @@
   "nav.lang-zh": "中文",
   "home.title": "Rodrigo Rodriguez | Guitarist & Composer",
   "home.desc": "Guitarist and composer from Rio de Janeiro. The album Disrupção, a musical triad with Guilherme Salgueiro and Ygor Helbourn.",
-  "home.hero-kicker": "New album out now",
+  "home.hero-kicker": "Disrupção · out now",
   "home.hero-title": "Disrupção",
-  "home.hero-sub": "The album that defies expectations: two decades of musical partnership between Rodrigo Rodriguez, Guilherme Salgueiro and Ygor Helbourn.",
+  "home.hero-sub": "Guitar, voice and the code of the Rio scene. Two decades of partnership with Guilherme Salgueiro and Ygor Helbourn, distilled in Disrupção.",
   "home.listen-spotify": "Listen on Spotify",
   "home.browse-discography": "Explore the discography",
   "home.bio-kicker": "About the artist",
@@ -30,7 +30,7 @@
   "home.bio-4": "Rodrigo, Guilherme and Ygor, together for nearly 20 years, shaped their music through a shared journey in Regra Zero and in several of Rodrigo's artistic fronts, such as Do Brasil with Moína Lima (daughter of Taiguara) and Rodrigo Quik's solo projects (Perdidos na Selva). In “Disrupção” this collaboration reaches a new level, where the familiarity between the musicians translates into inventive bass lines and precise drumming that fit perfectly into Rodrigo Rodriguez's engaging compositions. They had not met for years, did not rehearse together, and recorded exactly the way they heard a demo recorded by Rodrigo and Cleidisleia days before.",
   "home.bio-5": "Produced in collaboration with Cleidisleia, who also plays violin and fiddle, “Disrupção” is a testament to Rodrigo Rodriguez's musical innovation. Cleidisleia, Guilherme Salgueiro, Yuri Helbourn and Ygor Helbourn add rich sound layers, and it is the track “Disrupção” that highlights the true essence of the relationship between Rodrigo's guitar and voice.",
   "home.listen-title": "Listen",
-  "home.listen-sub": "Stream the albums on Spotify and watch performances on YouTube.",
+  "home.listen-sub": "Stream the albums and watch performances.",
   "home.all-albums": "All releases",
   "home.books-title": "From the library",
   "home.books-sub": "Press folios, scores and songbooks, scanned and collected in the Books section.",
@@ -307,5 +307,7 @@
   "book.corno.page-desc": "Melhor Ser Corno do Que Feminicida (v2.0) by Rodrigo Rodriguez. SO-OCD, toxic masculinity and femicide prevention, readable online in full.",
   "book.preface": "Preface",
   "book.preface-note": "Excerpt in the original Portuguese.",
-  "book.read-preface": "Read the preface"
+  "book.read-preface": "Read the preface",
+  "album.lyrics-hint": "Select a track in the console. Use arrow keys to move through the songs.",
+  "album.tracks-label": "Tracks"
 }

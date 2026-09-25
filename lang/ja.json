@@ -16,9 +16,9 @@
   "nav.lang-zh": "中文",
   "home.title": "Rodrigo Rodriguez ギタリスト & 作曲家",
   "home.desc": "リオデジャネイロ出身のギタリスト・作曲家。Guilherme Salgueiro、Ygor Helbourn との音楽的な三つ組によるアルバム「Disrupção」。",
-  "home.hero-kicker": "新アルバム発売中",
+  "home.hero-kicker": "Disrupção · リリース中",
   "home.hero-title": "Disrupção",
-  "home.hero-sub": "期待を裏切るアルバム Rodrigo Rodriguez、Guilherme Salgueiro、Ygor Helbourn の20年にわたる音楽的パートナーシップ。",
+  "home.hero-sub": "ギター、声、そしてリオのシーンのコード。Guilherme Salgueiro と Ygor Helbourn との20年にわたる共作が『Disrupção』に結実。",
   "home.listen-spotify": "Spotify で聴く",
   "home.browse-discography": "ディスコグラフィーを探索",
   "home.bio-kicker": "アーティストについて",
@@ -29,7 +29,7 @@
   "home.bio-4": "約20年間を共にしてきた Rodrigo、Guilherme、Ygor 彼らは Regra Zero での共有の歩みと、Moína Lima（Taiguara の娘）との Do Brasil や Rodrigo Quik のソロプロジェクト（Perdidos na Selva）など、Rodrigo の複数の芸術的な舞台を通じて音楽を形作ってきた。「Disrupção」では、このコラボレーションは新たな高みに達する。ミュージシャン同士の親しみは、Rodrigo Rodriguez の魅力的な楽曲に完璧にはまる独創的なベースラインと正確なドラミングへと結実した。彼らは長年会っておらず、一緒にリハーサルもせず、数日前に Rodrigo と Cleidisleia が録音したデモを聴いたとおりの演奏を録音した。",
   "home.bio-5": "バイオリンとフィドルも演奏する Cleidisleia との共同プロデュースによる「Disrupção」は、Rodrigo Rodriguez の音楽的革新を証明する作品である。Cleidisleia、Guilherme Salgueiro、Yuri Helbourn、Ygor Helbourn が豊かな音の層を重ねる そして Rodrigo のギターと歌声の関係性の真髄を際立たせるのは、楽曲「Disrupção」そのものだ。",
   "home.listen-title": "音楽を聴く",
-  "home.listen-sub": "Spotify でアルバムをストリーミングし、YouTube でパフォーマンスを観よう。",
+  "home.listen-sub": "アルバムをストリーミングし、パフォーマンスを観る。",
   "disc.title": "ディスコグラフィー Rodrigo Rodriguez",
   "disc.desc": "ギタリスト・作曲家 Rodrigo Rodriguez の完全ディスコグラフィー：1998年から2020年までのソロアルバムとコラボレーション。",
   "disc.h1": "ディスコグラフィー",
@@ -307,5 +307,7 @@
   "book.corno.page-title": "Melhor Ser Corno do Que Feminicida | 書籍 | Rodrigo Rodriguez",
   "book.preface": "序文",
   "book.preface-note": "原文（ポルトガル語）からの抜粋。",
-  "book.read-preface": "序文を読む"
+  "book.read-preface": "序文を読む",
+  "album.lyrics-hint": "コンソールで曲を選択。矢印キーで曲を移動できます。",
+  "album.tracks-label": "トラック"
 }

@@ -16,9 +16,9 @@
   "nav.lang-zh": "中文",
   "home.title": "Rodrigo Rodriguez Guitariste et Compositeur",
   "home.desc": "Guitariste et compositeur de Rio de Janeiro. L'album Disrupção, une triade musicale avec Guilherme Salgueiro et Ygor Helbourn.",
-  "home.hero-kicker": "Nouvel album disponible",
+  "home.hero-kicker": "Disrupção · disponible",
   "home.hero-title": "Disrupção",
-  "home.hero-sub": "L'album qui défie les attentes deux décennies de collaboration musicale entre Rodrigo Rodriguez, Guilherme Salgueiro et Ygor Helbourn.",
+  "home.hero-sub": "Guitare, voix et le code de la scène carioca. Deux décennies de partenariat avec Guilherme Salgueiro et Ygor Helbourn, distillées dans Disrupção.",
   "home.listen-spotify": "Écouter sur Spotify",
   "home.browse-discography": "Explorer la discographie",
   "home.bio-kicker": "À propos de l'artiste",
@@ -29,7 +29,7 @@
   "home.bio-4": "Rodrigo, Guilherme et Ygor, ensemble depuis près de 20 ans, ont façonné leur musique au fil d'un parcours musical partagé dans Regra Zero et sur plusieurs fronts artistiques de Rodrigo, comme Do Brasil avec Moína Lima (fille de Taiguara) et les projets solos de Rodrigo Quik (Perdidos na Selva). Dans «Disrupção», cette collaboration atteint un nouveau palier, où la familiarité entre les musiciens se traduit par des lignes de basse inventives et une batterie précise qui s'intègrent parfaitement aux compositions captivantes de Rodrigo Rodriguez. Ils ne s'étaient pas vus depuis des années, n'ont pas répété ensemble et ont enregistré comme ils ont entendu une démo gravée par Rodrigo et Cleidisleia quelques jours plus tôt.",
   "home.bio-5": "Produit en collaboration avec Cleidisleia, qui joue aussi du violon et de la vièle, «Disrupção» est un témoignage de l'innovation musicale de Rodrigo Rodriguez. Cleidisleia, Guilherme Salgueiro, Yuri Helbourn et Ygor Helbourn ajoutent de riches couches sonores c'est le titre «Disrupção» qui met en évidence la véritable essence de la relation entre la guitare et la voix de Rodrigo.",
   "home.listen-title": "Écouter",
-  "home.listen-sub": "Les albums en streaming sur Spotify et des performances sur YouTube.",
+  "home.listen-sub": "Écoutez les albums et regardez les performances.",
   "disc.title": "Discographie Rodrigo Rodriguez",
   "disc.desc": "Discographie complète du guitariste et compositeur Rodrigo Rodriguez: albums solos et collaborations de 1998 à 2020.",
   "disc.h1": "Discographie",
@@ -307,5 +307,7 @@
   "book.corno.page-title": "Melhor Ser Corno do Que Feminicida | Livres | Rodrigo Rodriguez",
   "book.preface": "Préface",
   "book.preface-note": "Extrait en portugais original.",
-  "book.read-preface": "Lire la préface"
+  "book.read-preface": "Lire la préface",
+  "album.lyrics-hint": "Choisissez un morceau dans la console. Utilisez les flèches du clavier pour naviguer entre les chansons.",
+  "album.tracks-label": "Morceaux"
 }

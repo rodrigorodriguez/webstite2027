@@ -83,6 +83,69 @@
   document.addEventListener('htmx:afterSwap', function() { revealIn(document); });
 })();
 
+/* Lyrics console: track index + stage, keyboard nav, progress rail.
+   Pure client-side navigation between server-rendered lyrics. */
+(function(){
+  function initConsole(root){
+    if (root._lyrBound) return;
+    root._lyrBound = true;
+    var items = Array.prototype.slice.call(root.querySelectorAll('.lyr-idx-item'));
+    var stage = root.querySelector('.lyr-stage');
+    if (!items.length || !stage) return;
+    var bar = root.querySelector('.lyr-progress i');
+    var pos = root.querySelector('.lyr-pos');
+
+    function select(i, scroll){
+      i = (i + items.length) % items.length;
+      var it = items[i];
+      var html = it.getAttribute('data-lyrics');
+      if (html == null) return;
+      stage.innerHTML = '<h3 class="lyr-track-title"></h3><div class="lyr-text"></div>';
+      stage.querySelector('.lyr-track-title').textContent = it.getAttribute('data-title') || '';
+      var body = stage.querySelector('.lyr-text');
+      body.textContent = html;
+      items.forEach(function(x, j){
+        if (j === i) x.setAttribute('aria-current', 'true');
+        else x.removeAttribute('aria-current');
+      });
+      if (pos) pos.textContent = (i + 1) + ' / ' + items.length;
+      if (bar) bar.style.width = (((i + 1) / items.length) * 100) + '%';
+      stage.scrollTop = 0;
+      if (scroll) {
+        var wrap = root.querySelector('.lyr-console');
+        if (wrap && wrap.getBoundingClientRect().top < 0) {
+          wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    items.forEach(function(it, i){
+      it.addEventListener('click', function(){ select(i, false); });
+    });
+    var prev = root.querySelector('[data-lyr="prev"]');
+    var next = root.querySelector('[data-lyr="next"]');
+    if (prev) prev.addEventListener('click', function(){ select(current() - 1, true); });
+    if (next) next.addEventListener('click', function(){ select(current() + 1, true); });
+    function current(){
+      var i = items.findIndex(function(x){ return x.getAttribute('aria-current') === 'true'; });
+      return i < 0 ? 0 : i;
+    }
+    document.addEventListener('keydown', function(e){
+      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+      var r = root.getBoundingClientRect();
+      if (r.top > window.innerHeight * 0.8 || r.bottom < window.innerHeight * 0.2) return;
+      e.preventDefault();
+      select(e.key === 'ArrowDown' ? current() + 1 : current() - 1, true);
+    });
+    select(0, false);
+  }
+  function initAll(){
+    document.querySelectorAll('.lyr-console').forEach(initConsole);
+  }
+  initAll();
+  document.addEventListener('htmx:afterSwap', initAll);
+})();
+
 /* i18n multi-language */
 (function(){
   var SUPPORTED={en:1,pt:1,es:1,fr:1,de:1,ja:1,'zh-cn':1},DEF='en',lang=DEF,_t=null;

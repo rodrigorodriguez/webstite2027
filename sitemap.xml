@@ -15,7 +15,6 @@
   <url><loc>https://rodrigorodriguez.com/press</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/contact</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/books</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://rodrigorodriguez.com/books/o-globo-regra-zero</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/artists</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/artists/bernardo-moura</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/artists/celso-esteves</loc><lastmod>2026-09-25</lastmod></url>
@@ -24,6 +23,8 @@
   <url><loc>https://rodrigorodriguez.com/artists/gui-salgueiro</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/artists/jehane-saade</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/artists/lauro-rodriguez</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/artists/moina-lima</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/artists/tajira-kilima</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/artists/roberto-ferreira</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/artists/rodrigo-garcia</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/artists/rodrigo-cosenza</loc><lastmod>2026-09-25</lastmod></url>
@@ -45,7 +46,6 @@
   <url><loc>https://rodrigorodriguez.com/pt/press</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/contact</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/books</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://rodrigorodriguez.com/pt/books/o-globo-regra-zero</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/artists</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/artists/bernardo-moura</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/artists/celso-esteves</loc><lastmod>2026-09-25</lastmod></url>
@@ -54,6 +54,8 @@
   <url><loc>https://rodrigorodriguez.com/pt/artists/gui-salgueiro</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/artists/jehane-saade</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/artists/lauro-rodriguez</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/pt/artists/moina-lima</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/pt/artists/tajira-kilima</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/artists/roberto-ferreira</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/artists/rodrigo-garcia</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/pt/artists/rodrigo-cosenza</loc><lastmod>2026-09-25</lastmod></url>
@@ -75,7 +77,6 @@
   <url><loc>https://rodrigorodriguez.com/es/press</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/contact</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/books</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://rodrigorodriguez.com/es/books/o-globo-regra-zero</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/artists</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/artists/bernardo-moura</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/artists/celso-esteves</loc><lastmod>2026-09-25</lastmod></url>
@@ -84,6 +85,8 @@
   <url><loc>https://rodrigorodriguez.com/es/artists/gui-salgueiro</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/artists/jehane-saade</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/artists/lauro-rodriguez</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/es/artists/moina-lima</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/es/artists/tajira-kilima</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/artists/roberto-ferreira</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/artists/rodrigo-garcia</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/es/artists/rodrigo-cosenza</loc><lastmod>2026-09-25</lastmod></url>
@@ -105,7 +108,6 @@
   <url><loc>https://rodrigorodriguez.com/fr/press</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/contact</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/books</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://rodrigorodriguez.com/fr/books/o-globo-regra-zero</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/artists</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/artists/bernardo-moura</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/artists/celso-esteves</loc><lastmod>2026-09-25</lastmod></url>
@@ -114,6 +116,8 @@
   <url><loc>https://rodrigorodriguez.com/fr/artists/gui-salgueiro</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/artists/jehane-saade</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/artists/lauro-rodriguez</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/fr/artists/moina-lima</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/fr/artists/tajira-kilima</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/artists/roberto-ferreira</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/artists/rodrigo-garcia</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/fr/artists/rodrigo-cosenza</loc><lastmod>2026-09-25</lastmod></url>
@@ -135,7 +139,6 @@
   <url><loc>https://rodrigorodriguez.com/de/press</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/contact</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/books</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://rodrigorodriguez.com/de/books/o-globo-regra-zero</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/artists</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/artists/bernardo-moura</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/artists/celso-esteves</loc><lastmod>2026-09-25</lastmod></url>
@@ -144,6 +147,8 @@
   <url><loc>https://rodrigorodriguez.com/de/artists/gui-salgueiro</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/artists/jehane-saade</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/artists/lauro-rodriguez</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/de/artists/moina-lima</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/de/artists/tajira-kilima</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/artists/roberto-ferreira</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/artists/rodrigo-garcia</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/de/artists/rodrigo-cosenza</loc><lastmod>2026-09-25</lastmod></url>
@@ -165,7 +170,6 @@
   <url><loc>https://rodrigorodriguez.com/ja/press</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/contact</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/books</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://rodrigorodriguez.com/ja/books/o-globo-regra-zero</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/artists</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/artists/bernardo-moura</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/artists/celso-esteves</loc><lastmod>2026-09-25</lastmod></url>
@@ -174,6 +178,8 @@
   <url><loc>https://rodrigorodriguez.com/ja/artists/gui-salgueiro</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/artists/jehane-saade</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/artists/lauro-rodriguez</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/ja/artists/moina-lima</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/ja/artists/tajira-kilima</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/artists/roberto-ferreira</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/artists/rodrigo-garcia</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/ja/artists/rodrigo-cosenza</loc><lastmod>2026-09-25</lastmod></url>
@@ -195,7 +201,6 @@
   <url><loc>https://rodrigorodriguez.com/zh-cn/press</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/contact</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/books</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://rodrigorodriguez.com/zh-cn/books/o-globo-regra-zero</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists/bernardo-moura</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists/celso-esteves</loc><lastmod>2026-09-25</lastmod></url>
@@ -204,6 +209,8 @@
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists/gui-salgueiro</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists/jehane-saade</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists/lauro-rodriguez</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/zh-cn/artists/moina-lima</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://rodrigorodriguez.com/zh-cn/artists/tajira-kilima</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists/roberto-ferreira</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists/rodrigo-garcia</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://rodrigorodriguez.com/zh-cn/artists/rodrigo-cosenza</loc><lastmod>2026-09-25</lastmod></url>

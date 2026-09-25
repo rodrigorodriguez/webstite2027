@@ -999,6 +999,30 @@ a { color: inherit; }
   transition: width 0.3s var(--ease-out);
 }
 
+/* Equalizer: pure decoration for the current track (aria-hidden) */
+
+.lyr-eq {
+  display: inline-flex; align-items: flex-end; gap: 2px; height: 12px;
+}
+
+.lyr-eq i {
+  width: 2px; background: var(--accent);
+  animation: eq-bounce 1s ease-in-out infinite;
+  opacity: 0.35;
+}
+
+.lyr-eq i:nth-child(1) { height: 5px; animation-delay: 0s; }
+.lyr-eq i:nth-child(2) { height: 10px; animation-delay: 0.15s; }
+.lyr-eq i:nth-child(3) { height: 7px; animation-delay: 0.3s; }
+.lyr-eq i:nth-child(4) { height: 11px; animation-delay: 0.45s; }
+
+@keyframes eq-bounce {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1); }
+}
+
+.lyr-idx-item[aria-current="true"] .lyr-eq i { opacity: 1; }
+
 .lyr-stage {
   padding: 36px 40px 44px;
   min-height: 380px; max-height: 560px; overflow-y: auto;
@@ -1278,6 +1302,34 @@ a { color: inherit; }
   text-shadow: 0 0 40px rgba(34, 211, 238, 0.25);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .notfound h1 { animation: glitch-flicker 3.5s infinite steps(1); }
+}
+
+@keyframes glitch-flicker {
+  0%, 92%, 100% { opacity: 1; }
+  93% { opacity: 0.55; transform: translateX(2px); }
+  94% { opacity: 1; transform: none; }
+  96% { opacity: 0.7; transform: translateX(-2px); }
+  97% { opacity: 1; transform: none; }
+}
+
+.q404 {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  margin-top: 14px; max-width: 560px;
+}
+
+.q404 a {
+  font-family: var(--font-mono);
+  font-size: 13px; font-weight: 600;
+  color: var(--fg-muted); text-decoration: none;
+  border: 1px solid var(--border-strong); border-radius: 999px;
+  padding: 8px 16px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.q404 a:hover { color: var(--accent); border-color: var(--accent); }
+
 /* ---------- Generic ---------- */
 
 .text-center { text-align: center; }
@@ -1399,6 +1451,79 @@ a { color: inherit; }
 }
 
 /* ---------- Page shell ---------- */
+
+/* Scroll progress rail (fixed under header, JS-driven width) */
+
+.scroll-rail {
+  position: fixed; top: var(--header-h); left: 0; right: 0;
+  height: 2px; z-index: 49; pointer-events: none;
+  background: transparent;
+}
+
+.scroll-rail i {
+  display: block; height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--accent-dim), var(--accent));
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+}
+
+/* View transitions: fade/slide page content on load */
+
+@media (prefers-reduced-motion: no-preference) {
+  main { animation: page-in 0.5s var(--ease-out) both; }
+}
+
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Hero entrance choreography */
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-kicker, .hero h1, .hero-sub, .hero-actions {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: hero-in 0.7s var(--ease-out) forwards;
+  }
+  .hero-kicker { animation-delay: 0.05s; }
+  .hero h1 { animation-delay: 0.15s; }
+  .hero-sub { animation-delay: 0.28s; }
+  .hero-actions { animation-delay: 0.4s; }
+}
+
+@keyframes hero-in {
+  to { opacity: 1; transform: none; }
+}
+
+/* Subtle hero parallax on scroll (JS sets --hero-shift) */
+
+.hero-bg img {
+  transform: translateY(var(--hero-shift, 0));
+  will-change: transform;
+}
+
+/* Filter chips (discography) */
+
+.filter-row {
+  display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 36px;
+}
+
+.filter-chip {
+  background: var(--bg-card); border: 1px solid var(--border);
+  color: var(--fg-muted); border-radius: 999px; padding: 7px 16px;
+  font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.filter-chip:hover { color: var(--fg); border-color: var(--accent-dim); }
+
+.filter-chip[aria-pressed="true"] {
+  color: var(--accent-ink); background: var(--accent); border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.t-item.hide { display: none; }
 
 .page-pad { padding-top: 64px; padding-bottom: 104px; }
 

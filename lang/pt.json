@@ -309,5 +309,9 @@
   "book.preface-note": "Trecho no original em português.",
   "book.read-preface": "Ler o prefácio",
   "album.lyrics-hint": "Escolha uma faixa no console. Use as setas do teclado para navegar pelas músicas.",
-  "album.tracks-label": "Faixas"
+  "album.tracks-label": "Faixas",
+  "filter.all": "Todos",
+  "filter.90s": "Anos 1990",
+  "filter.2000s": "Anos 2000",
+  "filter.2010s": "Anos 2010"
 }

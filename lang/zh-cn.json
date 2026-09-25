@@ -309,5 +309,9 @@
   "book.preface-note": "葡萄牙语原文节选。",
   "book.read-preface": "阅读前言",
   "album.lyrics-hint": "在控制台中选择曲目。使用方向键在歌曲之间切换。",
-  "album.tracks-label": "曲目"
+  "album.tracks-label": "曲目",
+  "filter.all": "全部",
+  "filter.90s": "1990年代",
+  "filter.2000s": "2000年代",
+  "filter.2010s": "2010年代"
 }

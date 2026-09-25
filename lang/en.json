@@ -309,5 +309,9 @@
   "book.preface-note": "Excerpt in the original Portuguese.",
   "book.read-preface": "Read the preface",
   "album.lyrics-hint": "Select a track in the console. Use arrow keys to move through the songs.",
-  "album.tracks-label": "Tracks"
+  "album.tracks-label": "Tracks",
+  "filter.all": "All",
+  "filter.90s": "1990s",
+  "filter.2000s": "2000s",
+  "filter.2010s": "2010s"
 }

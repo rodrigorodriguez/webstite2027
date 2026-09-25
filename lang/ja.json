@@ -309,5 +309,9 @@
   "book.preface-note": "原文（ポルトガル語）からの抜粋。",
   "book.read-preface": "序文を読む",
   "album.lyrics-hint": "コンソールで曲を選択。矢印キーで曲を移動できます。",
-  "album.tracks-label": "トラック"
+  "album.tracks-label": "トラック",
+  "filter.all": "すべて",
+  "filter.90s": "1990年代",
+  "filter.2000s": "2000年代",
+  "filter.2010s": "2010年代"
 }

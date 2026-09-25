@@ -11,7 +11,13 @@
 
   try {
     var saved = localStorage.getItem('theme');
-    document.documentElement.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
+    if (saved === 'light' || saved === 'dark') {
+      document.documentElement.setAttribute('data-theme', saved);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
   } catch (e) {
     document.documentElement.setAttribute('data-theme', 'dark');
   }
@@ -53,6 +59,82 @@
 
   bindCommon();
   document.addEventListener('htmx:afterSwap', bindCommon);
+})();
+
+/* Active nav: highlight the current section link (aria-current) */
+(function(){
+  function markActive(){
+    var path = location.pathname.replace(/^\/(pt|es|fr|de|ja|zh-cn)\//, '/');
+    var links = document.querySelectorAll('.nav-desktop > a, .mobile-overlay-inner > a');
+    links.forEach(function(a){
+      var h = a.getAttribute('href') || '';
+      if (!h.startsWith('/')) { a.removeAttribute('aria-current'); return; }
+      var target = (h === '/' ? '/' : h.replace(/\/$/, ''));
+      var here = (path === '/' || path === '/index.html') ? '/' : path.replace(/\.html$/, '').replace(/\/$/, '');
+      var match = (here === target) || (target !== '/' && here.startsWith(target + '/'));
+      if (match) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+  }
+  markActive();
+  document.addEventListener('htmx:afterSwap', markActive);
+  window.addEventListener('pageshow', markActive);
+})();
+
+/* Scroll progress rail + hero parallax: rAF batched, no layout thrash */
+(function(){
+  var bar = null, ticking = false, heroImg = null;
+  function ensureBar(){
+    if (bar && document.contains(bar)) return;
+    bar = document.querySelector('.scroll-rail i');
+    heroImg = document.querySelector('.hero-bg img');
+  }
+  function update(){
+    ticking = false;
+    ensureBar();
+    if (!bar) return;
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    var p = max > 0 ? Math.min(1, Math.max(0, (window.scrollY || doc.scrollTop) / max)) : 0;
+    bar.style.width = (p * 100).toFixed(2) + '%';
+    if (heroImg) {
+      var rect = heroImg.getBoundingClientRect();
+      var shift = rect.bottom > 0 ? Math.min(80, Math.max(0, -rect.top * 0.12)) : 0;
+      heroImg.style.setProperty('--hero-shift', shift.toFixed(1) + 'px');
+    }
+  }
+  function onScroll(){
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  document.addEventListener('htmx:afterSwap', onScroll);
+  update();
+})();
+
+/* Discography filters: mono chip row, hide/show timeline items */
+(function(){
+  function initFilters(){
+    var row = document.querySelector('.filter-row');
+    if (!row || row._fBound) return;
+    row._fBound = true;
+    var chips = Array.prototype.slice.call(row.querySelectorAll('.filter-chip'));
+    var items = Array.prototype.slice.call(document.querySelectorAll('.timeline .t-item'));
+    if (!chips.length || !items.length) return;
+    chips.forEach(function(chip){
+      chip.addEventListener('click', function(){
+        var cat = chip.getAttribute('data-filter');
+        chips.forEach(function(c){ c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+        items.forEach(function(it){
+          var cats = (it.getAttribute('data-cat') || '').split(/\s+/);
+          var show = cat === 'all' || cats.indexOf(cat) !== -1;
+          it.classList.toggle('hide', !show);
+        });
+      });
+    });
+  }
+  initFilters();
+  document.addEventListener('htmx:afterSwap', initFilters);
 })();
 
 /* Scroll reveal: IntersectionObserver only, no scroll listeners.
@@ -108,7 +190,11 @@
         if (j === i) x.setAttribute('aria-current', 'true');
         else x.removeAttribute('aria-current');
       });
-      if (pos) pos.textContent = (i + 1) + ' / ' + items.length;
+      if (pos) {
+        var eq = pos.querySelector('.lyr-eq');
+        pos.textContent = (i + 1) + ' / ' + items.length;
+        if (eq) pos.insertBefore(eq, pos.firstChild);
+      }
       if (bar) bar.style.width = (((i + 1) / items.length) * 100) + '%';
       stage.scrollTop = 0;
       if (scroll) {

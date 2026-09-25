@@ -309,5 +309,9 @@
   "book.preface-note": "Fragmento en el portugués original.",
   "book.read-preface": "Leer el prólogo",
   "album.lyrics-hint": "Elige una canción en la consola. Usa las flechas del teclado para navegar por las canciones.",
-  "album.tracks-label": "Canciones"
+  "album.tracks-label": "Canciones",
+  "filter.all": "Todos",
+  "filter.90s": "Años 1990",
+  "filter.2000s": "Años 2000",
+  "filter.2010s": "Años 2010"
 }

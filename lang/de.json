@@ -309,5 +309,9 @@
   "book.preface-note": "Auszug im portugiesischen Original.",
   "book.read-preface": "Vorwort lesen",
   "album.lyrics-hint": "Wählen Sie einen Track in der Konsole. Navigieren Sie mit den Pfeiltasten durch die Songs.",
-  "album.tracks-label": "Tracks"
+  "album.tracks-label": "Tracks",
+  "filter.all": "Alle",
+  "filter.90s": "1990er",
+  "filter.2000s": "2000er",
+  "filter.2010s": "2010er"
 }

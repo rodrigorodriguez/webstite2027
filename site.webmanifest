@@ -1,0 +1,22 @@
+{
+  "name": "Rodrigo Rodriguez",
+  "short_name": "Rodrigo R.",
+  "description": "Guitarist and composer from Rio de Janeiro. Discography, lyrics console, books and media.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070b12",
+  "theme_color": "#070b12",
+  "icons": [
+    {
+      "src": "/images/guitar-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

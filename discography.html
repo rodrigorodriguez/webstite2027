@@ -17,7 +17,7 @@
 <meta content="en_US" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Discography","description":"Complete discography of guitarist and composer Rodrigo Rodriguez.","url":"https://rodrigorodriguez.com/discography"}</script>
-<link href="/images/guitar-icon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/images/guitar-icon.svg" rel="icon" type="image/svg+xml"/><link rel="manifest" href="/site.webmanifest"/><meta content="#070b12" name="theme-color"/><meta content="#eef1f6" media="(prefers-color-scheme: light)" name="theme-color"/>
 <link href="https://rodrigorodriguez.com/discography" hreflang="x-default" rel="alternate"/>
 <link href="https://rodrigorodriguez.com/pt/discography" hreflang="pt" rel="alternate"/>
 <link href="https://rodrigorodriguez.com/es/discography" hreflang="es" rel="alternate"/>
@@ -38,8 +38,17 @@
     <h1 class="page-title" data-i18n="disc.h1">Discography</h1>
     <p class="page-sub" data-i18n="disc.sub">Solo albums and collaborations, from LogX (1998) to Disrupção (2020).</p>
 
+    <div class="filter-row" role="group" aria-label="Filters">
+      <button class="filter-chip" type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">All</button>
+      <button class="filter-chip" type="button" data-filter="solo" aria-pressed="false" data-i18n="nav.dd.solo">Solo</button>
+      <button class="filter-chip" type="button" data-filter="assoc" aria-pressed="false" data-i18n="nav.dd.associated">Associated</button>
+      <button class="filter-chip" type="button" data-filter="90s" aria-pressed="false" data-i18n="filter.90s">1990s</button>
+      <button class="filter-chip" type="button" data-filter="2000s" aria-pressed="false" data-i18n="filter.2000s">2000s</button>
+      <button class="filter-chip" type="button" data-filter="2010s" aria-pressed="false" data-i18n="filter.2010s">2010s</button>
+    </div>
+
     <div class="timeline">
-      <div class="t-item">
+      <div class="t-item" data-cat="assoc 90s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/logx">
           <img src="/images/logx1.jpg" alt="LogX" loading="lazy"/>
@@ -52,7 +61,7 @@
           </div>
         </a>
       </div>
-      <div class="t-item">
+      <div class="t-item" data-cat="solo 90s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/primitive-instrumentals">
           <img src="/images/primitive-instrumentals.jpg" alt="Primitive Instrumentals" loading="lazy"/>
@@ -65,7 +74,7 @@
           </div>
         </a>
       </div>
-      <div class="t-item">
+      <div class="t-item" data-cat="assoc 90s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/roberto-ferreira-celso-esteves">
           <img src="/images/roberto-ferreira.jpg" alt="Roberto Ferreira &amp; Celso Esteves" loading="lazy"/>
@@ -78,7 +87,7 @@
           </div>
         </a>
       </div>
-      <div class="t-item">
+      <div class="t-item" data-cat="solo 2000s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/regra-zero">
           <img src="/images/regra-zero.jpg" alt="Regra Zero" loading="lazy"/>
@@ -91,7 +100,7 @@
           </div>
         </a>
       </div>
-      <div class="t-item">
+      <div class="t-item" data-cat="assoc 2000s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/rodrigo-quik-nao-e-mais-um-disco-de-amor">
           <img src="/images/rodrigoquiknaoemaisumdiscodeamor.jpg" alt="Não É Mais Um Disco De Amor" loading="lazy"/>
@@ -104,7 +113,7 @@
           </div>
         </a>
       </div>
-      <div class="t-item">
+      <div class="t-item" data-cat="assoc 2000s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/rodrigo-quik-ame">
           <img src="/images/rodrigo-quik-ame-capa.jpg" alt="A.M.E, Rodrigo Quik" loading="lazy"/>
@@ -117,7 +126,7 @@
           </div>
         </a>
       </div>
-      <div class="t-item">
+      <div class="t-item" data-cat="assoc 2010s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/do-brasil">
           <img src="/images/moina.jpg" alt="Do Brasil, Moína" loading="lazy"/>
@@ -130,7 +139,7 @@
           </div>
         </a>
       </div>
-      <div class="t-item">
+      <div class="t-item" data-cat="solo 2010s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/linha-do-tempo">
           <img src="/images/linha-do-tempo.jpg" alt="Linha do Tempo" loading="lazy"/>
@@ -143,7 +152,7 @@
           </div>
         </a>
       </div>
-      <div class="t-item">
+      <div class="t-item" data-cat="solo 2010s">
         <span class="t-dot" aria-hidden="true"></span>
         <a class="t-card" href="/discography/disrupcao">
           <img src="/images/disrupcao.jpg" alt="Disrupção" loading="lazy"/>

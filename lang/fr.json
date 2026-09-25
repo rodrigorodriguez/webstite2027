@@ -309,5 +309,9 @@
   "book.preface-note": "Extrait en portugais original.",
   "book.read-preface": "Lire la préface",
   "album.lyrics-hint": "Choisissez un morceau dans la console. Utilisez les flèches du clavier pour naviguer entre les chansons.",
-  "album.tracks-label": "Morceaux"
+  "album.tracks-label": "Morceaux",
+  "filter.all": "Tous",
+  "filter.90s": "Années 1990",
+  "filter.2000s": "Années 2000",
+  "filter.2010s": "Années 2010"
 }

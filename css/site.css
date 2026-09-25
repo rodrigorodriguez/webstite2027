@@ -805,6 +805,11 @@ a { color: inherit; }
   .album-hero { grid-template-columns: 360px 1fr; align-items: end; gap: 64px; }
 }
 
+/* GSAP motion layer: 3D depth for cover entrance.
+   (Hero scale composition lives with the .hero-bg img rule at the
+   bottom of this file, near the site.js parallax.) */
+.album-hero { perspective: 1200px; }
+
 .album-cover {
   border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--border);
@@ -1671,7 +1676,7 @@ a { color: inherit; }
 /* Subtle hero parallax on scroll (JS sets --hero-shift) */
 
 .hero-bg img {
-  transform: translateY(var(--hero-shift, 0));
+  transform: translateY(var(--hero-shift, 0)) scale(var(--hero-scale, 1));
   will-change: transform;
 }
 

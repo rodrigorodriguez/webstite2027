@@ -41,7 +41,7 @@
   --bg-elevated: #f7fafc;
   --fg: #0b1220;
   --fg-muted: #46536b;
-  --fg-dim: #7a879c;
+  --fg-dim: #5a6980;
   --accent: #0e7490;
   --accent-soft: #0e7490;
   --accent-dim: #a5e6f4;
@@ -1949,4 +1949,11 @@ body::-webkit-scrollbar-thumb {
   font-family: var(--font-mono); font-size: 11px; font-weight: 700;
   letter-spacing: 0.24em; text-transform: uppercase;
   color: var(--fg-muted); margin: 0 0 14px;
+}
+
+/* ---------- Perf: skip style/layout/paint for off-screen sections ---------- */
+
+.section, .section-tight {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
 }

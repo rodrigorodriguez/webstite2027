@@ -1834,3 +1834,113 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .tilt { transform: none !important; }
 }
+
+/* ---------- Galactic layer: listen panels, starfield, cosmic chrome ---------- */
+
+.listen-panel {
+  display: flex; align-items: center; gap: 14px;
+  margin: 4px 0 6px;
+}
+
+.listen-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-mono); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.06em; color: var(--fg);
+  background:
+    linear-gradient(120deg, rgba(7, 79, 183, 0.35), rgba(34, 211, 238, 0.14));
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  border-radius: 999px; padding: 10px 20px; cursor: pointer;
+  transition: transform 0.15s var(--ease-out), box-shadow 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+}
+
+.listen-btn:hover {
+  border-color: rgba(34, 211, 238, 0.75);
+  box-shadow: 0 0 22px rgba(34, 211, 238, 0.28), var(--glow);
+  transform: translateY(-1px);
+}
+
+.listen-btn:active { transform: translateY(0) scale(0.98); }
+
+.lp-eq {
+  display: inline-flex; align-items: flex-end; gap: 2px; height: 12px;
+}
+
+.lp-eq i {
+  width: 3px; height: 4px; border-radius: 1px;
+  background: var(--accent);
+  transition: height 0.18s var(--ease-out);
+}
+
+.listen-btn.playing .lp-eq i { animation: lp-bounce 0.5s ease-in-out infinite alternate; }
+.listen-btn.playing .lp-eq i:nth-child(2) { animation-delay: 0.12s; }
+.listen-btn.playing .lp-eq i:nth-child(3) { animation-delay: 0.24s; }
+.listen-btn.playing .lp-eq i:nth-child(4) { animation-delay: 0.36s; }
+
+@keyframes lp-bounce {
+  from { height: 3px; }
+  to { height: 12px; }
+}
+
+.listen-open {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+  color: var(--fg-muted); text-decoration: none;
+  border-bottom: 1px dashed rgba(34, 211, 238, 0.4);
+  transition: color 0.18s var(--ease-out), border-color 0.18s var(--ease-out);
+}
+
+.listen-open:hover { color: var(--accent); border-color: var(--accent); }
+
+#starfield {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  opacity: 0.85;
+}
+
+[data-theme="light"] #starfield { opacity: 0.4; }
+
+/* Cosmic chrome: selection, scrollbar, focus ring */
+
+::selection {
+  background: rgba(34, 211, 238, 0.28);
+  color: inherit;
+}
+
+html { scrollbar-color: rgba(34, 211, 238, 0.45) rgba(7, 11, 18, 0.6); }
+
+body::-webkit-scrollbar { width: 11px; }
+
+body::-webkit-scrollbar-track { background: rgba(7, 11, 18, 0.5); }
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(34, 211, 238, 0.55), rgba(7, 79, 183, 0.55));
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+[data-theme="light"] body::-webkit-scrollbar-track { background: rgba(238, 241, 246, 0.8); }
+
+@media (prefers-reduced-motion: reduce) {
+  .listen-btn.playing .lp-eq i { animation: none; height: 8px; }
+}
+
+/* ---------- Cosmic mode (Konami egg) ---------- */
+
+[data-cosmic="1"] .site-header {
+  box-shadow: 0 1px 0 rgba(34, 211, 238, 0.35), 0 12px 40px rgba(7, 79, 183, 0.25);
+}
+
+[data-cosmic="1"] .hero-bg::before {
+  background:
+    radial-gradient(900px 520px at 82% 24%, rgba(34, 211, 238, 0.3), transparent 65%),
+    linear-gradient(rgba(34, 211, 238, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.16) 1px, transparent 1px);
+}
+
+[data-cosmic="1"] #starfield { opacity: 1; }
+
+[data-cosmic="1"] .card,
+[data-cosmic="1"] .book-card,
+[data-cosmic="1"] .album-cover {
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.4), 0 0 30px rgba(7, 79, 183, 0.28);
+}

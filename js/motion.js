@@ -162,6 +162,49 @@
     document.addEventListener('htmx:afterSwap', initDelight);
   });
 
+  /* ---- 6. Listen panels: click-to-play opens Spotify search in a new
+          tab (no autoplay hijack) and the local equalizer dances. ---- */
+  safe(function(){
+    document.addEventListener('click', function(e){
+      var btn = e.target.closest('.listen-btn');
+      if (!btn) return;
+      var url = btn.getAttribute('data-listen');
+      if (url) window.open(url, '_blank', 'noopener');
+      btn.classList.add('playing');
+      document.querySelectorAll('.listen-btn.playing').forEach(function(b){
+        if (b !== btn) { b.classList.remove('playing'); }
+      });
+      clearTimeout(btn._eqT);
+      btn._eqT = setTimeout(function(){ btn.classList.remove('playing'); }, 32000);
+    });
+  });
+
+  /* ---- 7. Keyboard shortcuts: "/" opens the search palette;
+          the Konami-style code (arrow keys) unlocks cosmic mode. ---- */
+  safe(function(){
+    var SEQ = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+    var pos = 0;
+    document.addEventListener('keydown', function(e){
+      var tag = (e.target.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable) return;
+      if (e.key === '/' && !e.ctrlKey && !e.metaKey && !e.altKey){
+        e.preventDefault();
+        if (typeof window.__searchOpen === 'function') window.__searchOpen();
+        return;
+      }
+      if (e.key === SEQ[pos]){
+        pos++;
+        if (pos === SEQ.length){
+          pos = 0;
+          document.documentElement.setAttribute('data-cosmic', '1');
+          if (typeof window.__toast === 'function') window.__toast('COSMIC MODE ON: esse site e de uma pessoa boa');
+        }
+      } else {
+        pos = e.key === SEQ[0] ? 1 : 0;
+      }
+    });
+  });
+
   var REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (REDUCE.addEventListener) REDUCE.addEventListener('change', function(e){
     if (e.matches) ScrollTrigger.getAll().forEach(function(t){ t.kill(); });

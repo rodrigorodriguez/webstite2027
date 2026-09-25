@@ -25,7 +25,7 @@
 <link href="https://rodrigorodriguez.com/ja/discography/rodrigo-quik-nao-e-mais-um-disco-de-amor" hreflang="ja" rel="alternate"/>
 <link href="https://rodrigorodriguez.com/zh-cn/discography/rodrigo-quik-nao-e-mais-um-disco-de-amor" hreflang="zh-cn" rel="alternate"/>
 <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png"/>
-<link href="/css/site.css?v=5" rel="stylesheet"/>
+<link href="/css/site.css?v=6" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -43,7 +43,15 @@
         <p class="press-date" data-i18n="disc.nao-year">2007</p>
         <p class="artist-bio" data-i18n="disc.nao-desc">Album by Rodrigo Quik, with Rodrigo Rodriguez on guitars.</p>
         <p class="artist-bio" style="margin-top:16px" data-i18n="disc.nao.intro">"Não É Mais Um Disco De Amor" is Rodrigo Quik's solo album, with Rodrigo Rodriguez on guitar.</p>
-                <div class="chip-row" aria-label="Listen">
+                <div class="listen-panel reveal">
+          <button class="listen-btn" type="button" data-listen="https://open.spotify.com/search/Nao%20E%20Mais%20Um%20Disco%20De%20Amor" data-i18n-aria="a11y.listen" title="Play on Spotify">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72L19 12 8 5.14z"/></svg>
+            <span class="lp-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span data-i18n="album.listen">Listen</span>
+          </button>
+          <a class="listen-open" href="https://open.spotify.com/artist/0eboxDIonOTXPoxweMT1qD" target="_blank" rel="noopener" data-i18n="album.open-spotify">Open Spotify</a>
+        </div>
+        <div class="chip-row" aria-label="Listen">
           <span class="chip-label" data-i18n="disc.listen">Listen on:</span>
           <a class="chip" href="https://open.spotify.com/artist/0eboxDIonOTXPoxweMT1qD" target="_blank" rel="noopener" data-i18n="disc.spotify">Spotify</a>
           <a class="chip" href="https://www.youtube.com/playlist?list=PLh5tkbWv-s0c9vyf-NMlU14178LhkKElT" target="_blank" rel="noopener" data-i18n="disc.youtube">YouTube</a>
@@ -54,11 +62,12 @@
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script defer src="/js/vendor/htmx.min.js"></script>
-<script defer src="/js/site.js?v=5"></script>
-<script defer src="/js/search.js?v=5"></script><script defer src="/js/vendor/gsap.min.js"></script>
+<script defer src="/js/site.js?v=6"></script>
+<script defer src="/js/search.js?v=6"></script><script defer src="/js/vendor/gsap.min.js"></script>
 <script defer src="/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/js/motion.js?v=2"></script>
-<script defer src="/js/share.js?v=5"></script>
+<script defer src="/js/starfield.js"></script>
+<script defer src="/js/share.js?v=6"></script>
 <button class="to-top" type="button" aria-label="Back to top" data-i18n-aria="a11y.top">&#8593;</button>
 </body>
 </html>

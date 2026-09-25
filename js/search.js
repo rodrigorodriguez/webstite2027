@@ -128,6 +128,7 @@
     if ((e.ctrlKey || e.metaKey) && (e.key === "k" || e.key === "K")) { e.preventDefault(); open(); }
     else if (e.key === "Escape") close();
   });
+  window.__searchOpen = open;
 
   window.__openSearch = open;
 })();

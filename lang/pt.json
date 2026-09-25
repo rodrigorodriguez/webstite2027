@@ -331,5 +331,8 @@
   "regra.credits-1b": "Produção artística: Moína Lima e Tajira Kilima",
   "footer.tag": "Violão, voz e código da cena carioca. Música original desde 1998: álbuns, livros e a luta pela canção original.",
   "footer.explore": "Explorar",
-  "footer.follow": "Seguir"
+  "footer.follow": "Seguir",
+  "album.listen": "Ouvir",
+  "album.open-spotify": "Abrir Spotify",
+  "a11y.listen": "Tocar no Spotify"
 }

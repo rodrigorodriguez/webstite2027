@@ -331,5 +331,8 @@
   "regra.credits-1b": "艺术制作: Moína Lima 与 Tajira Kilima",
   "footer.tag": "来自里约场景的吉他、歌声与代码。自1998年起的原创音乐: 专辑、书籍，以及为原创歌曲而战的历程。",
   "footer.explore": "探索",
-  "footer.follow": "关注"
+  "footer.follow": "关注",
+  "album.listen": "聆听",
+  "album.open-spotify": "打开 Spotify",
+  "a11y.listen": "在 Spotify 上播放"
 }

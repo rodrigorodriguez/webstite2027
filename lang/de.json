@@ -331,5 +331,8 @@
   "regra.credits-1b": "Künstlerische Produktion: Moína Lima und Tajira Kilima",
   "footer.tag": "Gitarre, Stimme und Code der Rio-Szene. Originalmusik seit 1998: Alben, Bücher und der Kampf für das originale Lied.",
   "footer.explore": "Entdecken",
-  "footer.follow": "Folgen"
+  "footer.follow": "Folgen",
+  "album.listen": "Anhören",
+  "album.open-spotify": "Spotify öffnen",
+  "a11y.listen": "Auf Spotify abspielen"
 }

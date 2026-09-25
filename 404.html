@@ -15,7 +15,7 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <link href="/images/guitar-icon.svg" rel="icon" type="image/svg+xml"/><link rel="manifest" href="/site.webmanifest"/><meta content="#070b12" name="theme-color"/><meta content="#eef1f6" media="(prefers-color-scheme: light)" name="theme-color"/>
 <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png"/>
-<link href="/css/site.css?v=5" rel="stylesheet"/>
+<link href="/css/site.css?v=6" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -25,6 +25,7 @@
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load" id="header-wrap"></div>
 <main role="main" id="main-content">
   <div class="notfound">
+    <canvas id="starfield" aria-hidden="true"></canvas>
     <span class="section-kicker">404</span>
     <h1 data-i18n="e404.h1">Page not found</h1>
     <p style="color:var(--fg-muted);margin:0" data-i18n="e404.sub">The page you are looking for does not exist or was moved.</p>
@@ -41,11 +42,12 @@
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script defer src="/js/vendor/htmx.min.js"></script>
-<script defer src="/js/site.js?v=5"></script>
-<script defer src="/js/search.js?v=5"></script><script defer src="/js/vendor/gsap.min.js"></script>
+<script defer src="/js/site.js?v=6"></script>
+<script defer src="/js/search.js?v=6"></script><script defer src="/js/vendor/gsap.min.js"></script>
 <script defer src="/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/js/motion.js?v=2"></script>
-<script defer src="/js/share.js?v=5"></script>
+<script defer src="/js/starfield.js"></script>
+<script defer src="/js/share.js?v=6"></script>
 <button class="to-top" type="button" aria-label="Back to top" data-i18n-aria="a11y.top">&#8593;</button>
 </body>
 </html>

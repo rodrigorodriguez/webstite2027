@@ -331,5 +331,8 @@
   "regra.credits-1b": "Production artistique : Moína Lima et Tajira Kilima",
   "footer.tag": "Guitare, voix et code de la scène carioca. Musique originale depuis 1998 : albums, livres et combat pour la chanson originale.",
   "footer.explore": "Explorer",
-  "footer.follow": "Suivre"
+  "footer.follow": "Suivre",
+  "album.listen": "Écouter",
+  "album.open-spotify": "Ouvrir Spotify",
+  "a11y.listen": "Lire sur Spotify"
 }

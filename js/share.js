@@ -14,6 +14,7 @@
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { toastEl.classList.remove("show"); }, 2200);
   }
+  window.__toast = toast;
 
   function doShare(btn) {
     var url = btn.getAttribute("data-share-url") || location.href;

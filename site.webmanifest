@@ -4,6 +4,18 @@
   "description": "Guitarist and composer from Rio de Janeiro. Discography, lyrics console, books and media.",
   "start_url": "/",
   "display": "standalone",
+  "shortcuts": [
+    {
+      "name": "Discography",
+      "url": "/discography",
+      "icons": [{ "src": "/images/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Books",
+      "url": "/books",
+      "icons": [{ "src": "/images/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
   "background_color": "#070b12",
   "theme_color": "#070b12",
   "icons": [

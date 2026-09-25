@@ -1,7 +1,7 @@
 (function() {
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    try { localStorage.setItem('theme', theme); } catch (e) {}
   }
 
   function toggleTheme() {
@@ -9,8 +9,12 @@
     setTheme(current === 'dark' ? 'light' : 'dark');
   }
 
-  var saved = localStorage.getItem('theme');
-  document.documentElement.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
+  try {
+    var saved = localStorage.getItem('theme');
+    document.documentElement.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
 
   function bindCommon() {
     document.getElementById('theme-btn')?.addEventListener('click', toggleTheme);
@@ -49,6 +53,34 @@
 
   bindCommon();
   document.addEventListener('htmx:afterSwap', bindCommon);
+})();
+
+/* Scroll reveal: IntersectionObserver only, no scroll listeners.
+   Elements opt in with class="reveal"; optional --reveal-delay for stagger. */
+(function() {
+  function revealIn(root) {
+    var els = (root || document).querySelectorAll('.reveal:not(.in-view)');
+    if (!els.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+      els.forEach(function(el) { el.classList.add('in-view'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          el.classList.add('in-view');
+          io.unobserve(el);
+          window.setTimeout(function() { el.classList.remove('reveal'); }, 950);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(function(el) { io.observe(el); });
+  }
+
+  window.__reveal = revealIn;
+  revealIn(document);
+  document.addEventListener('htmx:afterSwap', function() { revealIn(document); });
 })();
 
 /* i18n multi-language */
@@ -156,7 +188,7 @@
   });
 })();
 
-/* Lightbox (press/media lightbox: zoom + captions, like store viewers) */
+/* Lightbox (press/media/press clipping viewer: zoom + pan + captions + PDF link) */
 (function(){
   if (document.getElementById('__lb')) return;
   var root=document.createElement('div');
@@ -183,7 +215,6 @@
   var pdfA=document.getElementById('__lb-pdf');
   var items=[], idx=-1, zoom=1, isDown=false, startX=0, startY=0, sx=stage.scrollLeft, sy=stage.scrollTop;
 
-  function zoomLevels(){ return [1, 1.35, 1.8, 2.6]; }
   function applyZoom(){
     zoom=Math.min(3.5, Math.max(1, zoom));
     img.style.transform='scale('+zoom+')';

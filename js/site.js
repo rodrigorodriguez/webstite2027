@@ -291,6 +291,23 @@
   });
   lang=detect();
   load(lang,function(t){if(t){_t=t; apply(t); setSelect();}});
+  window.__SEARCH_LABELS = {
+    en: {title:"Search", hint:"Type to search", none:"No results", nav:"navigate", open:"open",
+         cat:{page:"page", album:"album", artist:"artist", book:"book"}},
+    pt: {title:"Buscar", hint:"Digite para buscar", none:"Nenhum resultado", nav:"navegar", open:"abrir",
+         cat:{page:"página", album:"álbum", artist:"artista", book:"livro"}},
+    es: {title:"Buscar", hint:"Escribe para buscar", none:"Sin resultados", nav:"navegar", open:"abrir",
+         cat:{page:"página", album:"álbum", artist:"artista", book:"libro"}},
+    fr: {title:"Rechercher", hint:"Tapez pour rechercher", none:"Aucun résultat", nav:"naviguer", open:"ouvrir",
+         cat:{page:"page", album:"album", artist:"artiste", book:"livre"}},
+    de: {title:"Suchen", hint:"Tippen zum Suchen", none:"Keine Ergebnisse", nav:"navigieren", open:"öffnen",
+         cat:{page:"Seite", album:"Album", artist:"Künstler", book:"Buch"}},
+    ja: {title:"検索", hint:"入力して検索", none:"結果なし", nav:"移動", open:"開く",
+         cat:{page:"ページ", album:"アルバム", artist:"アーティスト", book:"書籍"}},
+    "zh-cn": {title:"搜索", hint:"输入以搜索", none:"无结果", nav:"导航", open:"打开",
+         cat:{page:"页面", album:"专辑", artist:"艺术家", book:"书册"}}
+  };
+  window.__searchLabels = window.__SEARCH_LABELS[lang] || window.__SEARCH_LABELS.en;
   window.__switchLang=function(l){
     var p=location.pathname.replace(/^\/(pt|es|fr|de|ja|zh-cn)(\/|$)/,'/');
     location.href=(l===DEF?'':'/'+l)+p;

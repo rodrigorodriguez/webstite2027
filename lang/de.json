@@ -313,5 +313,7 @@
   "filter.all": "Alle",
   "filter.90s": "1990er",
   "filter.2000s": "2000er",
-  "filter.2010s": "2010er"
+  "filter.2010s": "2010er",
+  "share.label": "Teilen",
+  "share.copy": "Link kopieren"
 }

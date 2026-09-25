@@ -313,5 +313,7 @@
   "filter.all": "すべて",
   "filter.90s": "1990年代",
   "filter.2000s": "2000年代",
-  "filter.2010s": "2010年代"
+  "filter.2010s": "2010年代",
+  "share.label": "シェア",
+  "share.copy": "リンクをコピー"
 }

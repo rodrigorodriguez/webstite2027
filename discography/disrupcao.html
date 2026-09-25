@@ -29,6 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Discography", "item": "https://rodrigorodriguez.com/discography"}, {"@type": "ListItem", "position": 2, "name": "Disrupção", "item": "https://rodrigorodriguez.com/discography/disrupcao"}]}</script>
 </head>
 <body>
 <a href="#main-content" class="sr-only skip-link" data-i18n="skip_link">Skip to content</a>
@@ -46,6 +47,15 @@
         <p class="album-desc" data-i18n="disrupcao.story-1">Rodrigo Rodriguez, Guilherme Salgueiro and Ygor Helbourn, a musical triad united for nearly two decades, bring their shared journey to the surface in the album "Disrupção". Originating from Regra Zero and collaborating across several artistic fronts, including notable projects such as "Do Brasil with Moína Lima" and the solo ventures of Rodrigo Quik in "Perdidos na Selva", this collaboration reaches a new peak in the most recent album.</p>
         <div class="album-actions">
           <a class="btn btn-primary" href="https://open.spotify.com/artist/0eboxDIonOTXPoxweMT1qD" target="_blank" rel="noopener" data-i18n="album.listen-spotify">Listen on Spotify</a>
+        </div>
+        <div class="share-row">
+          <span class="share-label" data-i18n="share.label">Share</span>
+          <button class="share-btn" type="button" data-share-net="native" data-share-title="Disrupção | Rodrigo Rodriguez" data-share-text="Rodrigo Rodriguez | Disrupção" data-toast-ok="Link copied" data-i18n-title="share.copy">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            <span data-i18n="share.copy">Copy link</span>
+          </button>
+          <a class="share-btn" href="https://twitter.com/intent/tweet?text=Rodrigo%20Rodriguez%20Disrupção" data-share-net="x" data-share-title="Disrupção | Rodrigo Rodriguez" data-share-text="Rodrigo Rodriguez | Disrupção" target="_blank" rel="noopener">X</a>
+          <a class="share-btn" href="#" data-share-net="wa" data-share-title="Disrupção | Rodrigo Rodriguez" data-share-text="Rodrigo Rodriguez | Disrupção">WhatsApp</a>
         </div>
       </div>
     </div>
@@ -120,7 +130,9 @@
   </div>
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
-<script defer src="https://unpkg.com/htmx.org@2.0.10"></script>
+<script defer src="/js/vendor/htmx.min.js"></script>
 <script defer src="/js/site.js"></script>
+<script defer src="/js/search.js"></script>
+<script defer src="/js/share.js"></script>
 </body>
 </html>

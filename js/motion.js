@@ -14,31 +14,19 @@
     try { fn(); } catch (err) { /* motion must never break content */ }
   }
 
-  /* ---- 1. Hero scene: copy rises once; photo zooms out on scrub.
-          Scale goes through --hero-scale so it composes with the
-          site.js --hero-shift parallax inside a single transform. ---- */
+  /* ---- 1. Hero scene: photo zooms out on scrub (CSS owns the copy
+          entrance via hero-in keyframes; GSAP must not double it). ---- */
   safe(function(){
     var hero = document.querySelector('.hero');
     if (!hero) return;
     var img = hero.querySelector('.hero-bg img');
-    var copy = hero.querySelectorAll('.hero-kicker, .hero h1, .hero-sub, .hero-actions');
     if (img) {
       gsap.fromTo(img,
         { '--hero-scale': 1.07 },
         {
           '--hero-scale': 1,
-          ease: 'none',
-          scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.6 }
-        });
-    }
-    if (copy.length) {
-      gsap.fromTo(copy,
-        { y: 40, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
-          stagger: 0.08, clearProps: 'transform,opacity',
-          scrollTrigger: { trigger: hero, start: 'top 75%' }
-        });
+          ease: 'none',        scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.6 }
+      });
     }
   });
 
@@ -60,6 +48,17 @@
         { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out', stagger: 0.06, delay: 0.14,
           clearProps: 'transform,opacity',
           scrollTrigger: { trigger: '.album-hero', start: 'top 78%' } });
+    }
+    /* inner image drifts on scrub: separate element, composes with the
+       cover entrance instead of fighting it for the same transform */
+    var cimg = cover.querySelector('img');
+    if (cimg) {
+      gsap.fromTo(cimg,
+        { yPercent: 0, scale: 1.12 },
+        {
+          yPercent: -7, scale: 1.12, ease: 'none',
+          scrollTrigger: { trigger: '.album-hero', start: 'top top', end: 'bottom top', scrub: 0.6 }
+        });
     }
   });
 
@@ -108,6 +107,59 @@
       .observe(stage, { subtree: true, childList: true, characterData: true });
     /* gentle idle float on the console itself */
     gsap.to('.lyr-console', { y: -5, duration: 2.8, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  });
+
+  /* ---- 5. Pointer-fine delight: 3D tilt + magnetic buttons.
+          Gated to hover:hover + pointer:fine (no touch false-hovers). */
+  safe(function(){
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    function makeTilt(el, max, lift){
+      if (el._tilt) return;
+      el._tilt = true;
+      el.classList.add('tilt');
+      gsap.set(el, { transformPerspective: 900 });
+      var rx = gsap.quickTo(el, 'rotationX', { duration: 0.4, ease: 'power3.out', overwrite: 'auto' });
+      var ry = gsap.quickTo(el, 'rotationY', { duration: 0.4, ease: 'power3.out', overwrite: 'auto' });
+      var yy = gsap.quickTo(el, 'y', { duration: 0.4, ease: 'power3.out', overwrite: 'auto' });
+      el.addEventListener('mousemove', function(e){
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        el.classList.add('is-tilting');
+        ry(px * max * 2);
+        rx(-py * max * 2);
+        yy(lift ? -6 : 0);
+      });
+      el.addEventListener('mouseleave', function(){
+        el.classList.remove('is-tilting');
+        rx(0); ry(0); yy(0);
+      });
+    }
+
+    function makeMagnetic(el){
+      if (el._mag) return;
+      el._mag = true;
+      var qx = gsap.quickTo(el, 'x', { duration: 0.35, ease: 'power3.out', overwrite: 'auto' });
+      var qy = gsap.quickTo(el, 'y', { duration: 0.35, ease: 'power3.out', overwrite: 'auto' });
+      el.addEventListener('mousemove', function(e){
+        var r = el.getBoundingClientRect();
+        qx((e.clientX - (r.left + r.width / 2)) * 0.22);
+        qy((e.clientY - (r.top + r.height / 2)) * 0.3);
+      });
+      el.addEventListener('mouseleave', function(){ qx(0); qy(0); });
+    }
+
+    function initDelight(){
+      var cover = document.querySelector('.album-hero .album-cover');
+      if (cover) makeTilt(cover, 9, false);
+      document.querySelectorAll('.artist-photo').forEach(function(el){ makeTilt(el, 7, false); });
+      document.querySelectorAll('.grid-3 .card, .book-card').forEach(function(el){ makeTilt(el, 5, true); });
+      document.querySelectorAll('.hero-actions .btn, .album-actions .btn').forEach(makeMagnetic);
+    }
+
+    initDelight();
+    document.addEventListener('htmx:afterSwap', initDelight);
   });
 
   var REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)');

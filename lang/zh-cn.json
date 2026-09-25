@@ -315,5 +315,9 @@
   "filter.2000s": "2000年代",
   "filter.2010s": "2010年代",
   "share.label": "分享",
-  "share.copy": "复制链接"
+  "share.copy": "复制链接",
+  "a11y.top": "回到顶部",
+  "a11y.theme": "切换主题",
+  "a11y.menu": "菜单",
+  "a11y.lang": "语言"
 }

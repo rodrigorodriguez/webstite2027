@@ -31,6 +31,7 @@
 <link href="/images/rodrigo-rodriguez-1001b.jpg" rel="preload" as="image" fetchpriority="high"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
@@ -55,7 +56,7 @@
   <section class="section">
     <div class="container bio-wrap">
       <div class="bio-photo reveal">
-        <img src="/images/rod.jpg" alt="Rodrigo Rodriguez playing guitar" loading="lazy"/>
+        <img src="/images/rod.jpg" width="800" height="1000" alt="Rodrigo Rodriguez playing guitar" loading="lazy"/>
       </div>
       <div class="bio-content">
         <h2 class="page-title reveal" data-i18n="home.bio-title">Guitarist, composer, songwriter</h2>
@@ -71,21 +72,21 @@
     <div class="container">
       <div class="band-grid">
         <a class="card band-lead reveal" href="/discography/disrupcao">
-          <div class="card-media"><img src="/images/disrupcao.jpg" alt="Disrupção" loading="lazy"/><span class="year-badge">2020</span></div>
+          <div class="card-media"><img src="/images/disrupcao.jpg" width="500" height="500" alt="Disrupção" loading="lazy"/><span class="year-badge">2020</span></div>
           <div class="card-body">
             <h3 data-i18n="disc.disrupcao">Disrupção</h3>
             <p data-i18n="disc.disrupcao-desc">The album that defies expectations, recorded with the two-decade triad: Rodrigo Rodriguez, Guilherme Salgueiro and Ygor Helbourn.</p>
           </div>
         </a>
         <a class="card reveal" href="/discography/linha-do-tempo" style="--reveal-delay:90ms">
-          <div class="card-media"><img src="/images/linha-do-tempo.jpg" alt="Linha do Tempo" loading="lazy"/><span class="year-badge">2016</span></div>
+          <div class="card-media"><img src="/images/linha-do-tempo.jpg" width="500" height="500" alt="Linha do Tempo" loading="lazy"/><span class="year-badge">2016</span></div>
           <div class="card-body">
             <h3 data-i18n="disc.linha">Linha do Tempo</h3>
             <p data-i18n="disc.linha-desc">First solo CD of the Rio guitarist and composer, produced with Léo Guimarães, winner of the 2013 Latin Grammy for Best Engineered Album.</p>
           </div>
         </a>
         <a class="card reveal" href="/discography/regra-zero" style="--reveal-delay:180ms">
-          <div class="card-media"><img src="/images/regra-zero.jpg" alt="Regra Zero" loading="lazy"/><span class="year-badge">2005</span></div>
+          <div class="card-media"><img src="/images/regra-zero.jpg" width="500" height="500" alt="Regra Zero" loading="lazy"/><span class="year-badge">2005</span></div>
           <div class="card-body">
             <h3 data-i18n="disc.regra">Regra Zero</h3>
             <p data-i18n="disc.regra-desc">The project that carried Rodrigo Rodriguez's songs into a private world of original music.</p>
@@ -170,5 +171,6 @@
 <script defer src="/js/site.js"></script>
 <script defer src="/js/search.js"></script>
 <script defer src="/js/share.js"></script>
+<button class="to-top" type="button" aria-label="Back to top" data-i18n-aria="a11y.top">&#8593;</button>
 </body>
 </html>

@@ -315,5 +315,9 @@
   "filter.2000s": "2000er",
   "filter.2010s": "2010er",
   "share.label": "Teilen",
-  "share.copy": "Link kopieren"
+  "share.copy": "Link kopieren",
+  "a11y.top": "Nach oben",
+  "a11y.theme": "Design wechseln",
+  "a11y.menu": "Menü",
+  "a11y.lang": "Sprache"
 }

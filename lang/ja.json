@@ -315,5 +315,9 @@
   "filter.2000s": "2000年代",
   "filter.2010s": "2010年代",
   "share.label": "シェア",
-  "share.copy": "リンクをコピー"
+  "share.copy": "リンクをコピー",
+  "a11y.top": "トップへ戻る",
+  "a11y.theme": "テーマ切替",
+  "a11y.menu": "メニュー",
+  "a11y.lang": "言語"
 }

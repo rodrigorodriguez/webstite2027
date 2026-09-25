@@ -83,7 +83,7 @@
 
 /* Scroll progress rail + hero parallax: rAF batched, no layout thrash */
 (function(){
-  var bar = null, ticking = false, heroImg = null;
+  var bar = null, ticking = false, heroImg = null, toTop = null;
   function ensureBar(){
     if (bar && document.contains(bar)) return;
     bar = document.querySelector('.scroll-rail i');
@@ -92,11 +92,14 @@
   function update(){
     ticking = false;
     ensureBar();
-    if (!bar) return;
-    var doc = document.documentElement;
-    var max = doc.scrollHeight - window.innerHeight;
-    var p = max > 0 ? Math.min(1, Math.max(0, (window.scrollY || doc.scrollTop) / max)) : 0;
-    bar.style.width = (p * 100).toFixed(2) + '%';
+    if (bar) {
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - window.innerHeight;
+      var p = max > 0 ? Math.min(1, Math.max(0, (window.scrollY || doc.scrollTop) / max)) : 0;
+      bar.style.width = (p * 100).toFixed(2) + '%';
+      if (!toTop) toTop = document.querySelector('.to-top');
+      if (toTop) toTop.classList.toggle('show', window.scrollY > 700);
+    }
     if (heroImg) {
       var rect = heroImg.getBoundingClientRect();
       var shift = rect.bottom > 0 ? Math.min(80, Math.max(0, -rect.top * 0.12)) : 0;
@@ -110,6 +113,10 @@
   window.addEventListener('resize', onScroll, { passive: true });
   document.addEventListener('htmx:afterSwap', onScroll);
   update();
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('.to-top');
+    if (t) window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 })();
 
 /* Discography filters: mono chip row, hide/show timeline items */
@@ -216,6 +223,17 @@
       var i = items.findIndex(function(x){ return x.getAttribute('aria-current') === 'true'; });
       return i < 0 ? 0 : i;
     }
+    var copyBtn = root.querySelector('[data-lyr="copy"]');
+    if (copyBtn) copyBtn.addEventListener('click', function(){
+      var it = items[current()];
+      var txt = (it.getAttribute('data-title') || '') + '\n\n' + (it.getAttribute('data-lyrics') || '');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(function(){
+          copyBtn.classList.add('lyr-copy-ok');
+          window.setTimeout(function(){ copyBtn.classList.remove('lyr-copy-ok'); }, 1600);
+        });
+      }
+    });
     document.addEventListener('keydown', function(e){
       if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
       var r = root.getBoundingClientRect();
@@ -230,6 +248,29 @@
   }
   initAll();
   document.addEventListener('htmx:afterSwap', initAll);
+})();
+
+/* Lazy media embeds: swap data-src when the frame scrolls into view */
+(function(){
+  function initLazy(){
+    var frames=document.querySelectorAll('iframe[data-src]:not([src])');
+    if(!frames.length) return;
+    if(!('IntersectionObserver' in window)){
+      frames.forEach(function(f){ f.src=f.getAttribute('data-src'); });
+      return;
+    }
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.src=en.target.getAttribute('data-src');
+          io.unobserve(en.target);
+        }
+      });
+    },{rootMargin:'200px'});
+    frames.forEach(function(f){ io.observe(f); });
+  }
+  initLazy();
+  document.addEventListener('htmx:afterSwap', initLazy);
 })();
 
 /* i18n multi-language */
@@ -266,6 +307,10 @@
           var f=tn.firstChild(); if(f){f.nodeValue=v; var n; while(n=tn.nextNode()) n.nodeValue='';}
         } else el.textContent=v;
       }
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      var v=t[el.getAttribute('data-i18n-aria')];
+      if(v) el.setAttribute('aria-label',v);
     });
     document.documentElement.classList.remove('i18n-loading');
     document.documentElement.lang = lang;
@@ -348,6 +393,16 @@
   });
   document.addEventListener('keydown',function(e){
     if(e.key==='Escape') closeMenus();
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+      var open=document.querySelector('.dropdown.open');
+      if(!open) return;
+      e.preventDefault();
+      var links=Array.prototype.slice.call(open.querySelectorAll('.dropdown-menu a'));
+      if(!links.length) return;
+      var i=links.indexOf(document.activeElement);
+      i=e.key==='ArrowDown'?(i+1+links.length)%links.length:(i-1+links.length)%links.length;
+      links[i].focus();
+    }
   });
   document.addEventListener('htmx:afterSwap',function(){
     closeMenus();

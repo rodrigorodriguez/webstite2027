@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Branded OG cards (1200x630) in the Disrupção palette: cobalt gradient,
-cyan grid, title + domain footer. Zero external deps."""
+cyan grid, title + domain footer. Pure stdlib (PNG by hand)."""
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import numpy as np, os, json
 

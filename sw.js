@@ -2,16 +2,17 @@
    Strategy: navigation requests are network-first with cached offline
    fallback; same-origin static assets are cache-first (they carry the
    ?v=N cache-bust). Cosmically small, deliberately boring. */
-const CACHE = 'rr-site-v1';
+const CACHE = 'rr-site-v4';
 const OFFLINE = '/404.html';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll([
-    '/', '/404.html',
-    '/css/site.css?v=7', '/js/site.js?v=7', '/js/search.js?v=7',
+    '/', '/404.html', '/software.html', '/biografia.html',
+    '/css/site.css?v=9', '/js/site.js?v=7', '/js/search.js?v=7',
     '/js/share.js?v=7', '/js/motion.js?v=3',
     '/fonts/space-grotesk-700.woff2', '/fonts/manrope-400.woff2',
-    '/images/icons/icon-192.png', '/images/icons/icon-512.png'
+    '/images/icons/icon-192.png', '/images/icons/icon-512.png',
+    '/images/disruption-bolt.svg'
   ])).then(() => self.skipWaiting()));
 });
 

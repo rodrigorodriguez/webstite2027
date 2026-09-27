@@ -30,8 +30,10 @@
     { t: "Books", k: "books library pdf", u: "/books", cat: "page" },
     { t: "O Super Hétero", k: "super hetero so-ocd book", u: "/books/o-super-hetero", cat: "book" },
     { t: "Melhor Ser Corno do Que Feminicida", k: "corno feminicida book", u: "/books/melhor-ser-corno-do-que-feminicida", cat: "book" },
+    { t: "Biografia", k: "biografia biography historia vida music biography", u: "/biografia", cat: "page" },
     { t: "Media", k: "media photos videos", u: "/photo-video", cat: "page" },
     { t: "Press", k: "press interviews clippings", u: "/press", cat: "page" },
+    { t: "Software", k: "software general bots pragmatismo rust llm code architect", u: "/software", cat: "page" },
     { t: "Contact", k: "contact booking email", u: "/contact", cat: "page" }
   ];
 

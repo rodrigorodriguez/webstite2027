@@ -1,7 +1,7 @@
 {
   "name": "Rodrigo Rodriguez",
   "short_name": "Rodrigo R.",
-  "description": "Guitarist and composer from Rio de Janeiro. Discography, lyrics console, books and media.",
+  "description": "Guitarist, composer and software architect from Rio de Janeiro. Discography, lyrics console, books, software and media.",
   "start_url": "/",
   "display": "standalone",
   "shortcuts": [
@@ -13,6 +13,11 @@
     {
       "name": "Books",
       "url": "/books",
+      "icons": [{ "src": "/images/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Software",
+      "url": "/software",
       "icons": [{ "src": "/images/icons/icon-192.png", "sizes": "192x192" }]
     }
   ],
@@ -38,7 +43,7 @@
       "purpose": "maskable"
     },
     {
-      "src": "/images/guitar-icon.svg",
+      "src": "/images/disruption-bolt.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"

@@ -63,13 +63,24 @@
 (function(){
   function markActive(){
     var path = location.pathname.replace(/^\/(pt|es|fr|de|ja|zh-cn)\//, '/');
-    var links = document.querySelectorAll('.nav-desktop > a, .mobile-overlay-inner > a');
+    var links = document.querySelectorAll('.nav-desktop > a, .nav-desktop .dropdown-trigger, .mobile-overlay-inner > a');
+    var here = (path === '/' || path === '/index.html') ? '/' : path.replace(/\.html$/, '').replace(/\/$/, '');
     links.forEach(function(a){
-      var h = a.getAttribute('href') || '';
-      if (!h.startsWith('/')) { a.removeAttribute('aria-current'); return; }
-      var target = (h === '/' ? '/' : h.replace(/\/$/, ''));
-      var here = (path === '/' || path === '/index.html') ? '/' : path.replace(/\.html$/, '').replace(/\/$/, '');
-      var match = (here === target) || (target !== '/' && here.startsWith(target + '/'));
+      var match = false;
+      var dm = a.getAttribute('data-match');
+      if (dm) {
+        match = dm.split(/\s+/).some(function(t){
+          t = t.replace(/\/$/, '');
+          return t && (here === t || here.indexOf(t + '/') === 0);
+        });
+      } else {
+        var h = a.getAttribute('href') || '';
+        var clean = h.split('#')[0];
+        if (clean && clean.startsWith('/')) {
+          var target = (clean === '/' ? '/' : clean.replace(/\/$/, ''));
+          match = (here === target) || (target !== '/' && here.indexOf(target + '/') === 0);
+        }
+      }
       if (match) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     });

@@ -28,31 +28,59 @@
 <link href="https://rodrigorodriguez.com/ja" hreflang="ja" rel="alternate"/>
 <link href="https://rodrigorodriguez.com/zh-cn" hreflang="zh-cn" rel="alternate"/>
 <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png"/>
-<link href="/css/site.css?v=9" rel="stylesheet"/>
-<link rel="preload" as="image" href="/images/rodrigo-rodriguez-1001b-1600w.webp" imagesrcset="/images/rodrigo-rodriguez-1001b-900w.webp 900w, /images/rodrigo-rodriguez-1001b-1600w.webp 1600w" imagesizes="100vw" fetchpriority="high"/>
+<link href="/css/site.css?v=12" rel="stylesheet"/>
+<link rel="preload" as="image" href="/images/tile-music.jpg" fetchpriority="high"/>
 <link href="/fonts/space-grotesk-700.woff2" rel="preload" as="font" type="font/woff2" crossorigin/><link href="/fonts/manrope-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin/>
 </head>
-<body>
+<body class="page-home">
 <a href="#main-content" class="sr-only skip-link" data-i18n="skip_link">Skip to content</a>
 <div hx-get="/partials/header.html" hx-swap="innerHTML" hx-trigger="load" id="header-wrap"></div>
 <main role="main" id="main-content">
-  <section class="hero">
-    <div class="hero-bg">
-      <canvas id="starfield" aria-hidden="true"></canvas>
-      <img src="/images/rodrigo-rodriguez-1001b-1600w.webp" srcset="/images/rodrigo-rodriguez-1001b-900w.webp 900w, /images/rodrigo-rodriguez-1001b-1600w.webp 1600w" sizes="100vw" alt="Rodrigo Rodriguez" fetchpriority="high"/>
-    </div>
-    <div class="hero-inner">
-      <span class="hero-kicker"><span class="k-dot" aria-hidden="true"></span><span data-i18n="home.hero-kicker">Disrupção · out now</span></span>
-      <h1>Rodrigo Rodriguez</h1>
-      <p class="hero-sub" data-i18n="home.hero-sub">Guitar, voice and code of the Rio scene. Two decades of partnership with Guilherme Salgueiro and Ygor Helbourn, distilled in Disrupção.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://open.spotify.com/artist/0eboxDIonOTXPoxweMT1qD" target="_blank" rel="noopener" data-i18n="home.listen-spotify">Listen on Spotify</a>
-        <a class="btn btn-light" href="/discography" data-i18n="home.browse-discography">Explore the discography</a>
-      </div>
-    </div>
+  <section class="quad-hero">
+    <h1 class="sr-only" data-i18n="home.title">Rodrigo Rodriguez | Guitarist &amp; Composer</h1>
+    <a class="quad" href="/discography">
+      <img src="/images/tile-music.jpg" width="1400" height="980" alt="Rodrigo Rodriguez on stage" fetchpriority="high"/>
+      <span class="quad-scrim" aria-hidden="true"></span>
+      <span class="quad-go" aria-hidden="true">&#8599;</span>
+      <span class="quad-body">
+        <span class="quad-num">01</span>
+        <h2 data-i18n="nav.music">Music</h2>
+        <span class="quad-sub" data-i18n="home.quad.music-sub">Albums, artists and the Rio scene</span>
+      </span>
+    </a>
+    <a class="quad" href="/books">
+      <img src="/images/tile-books.jpg" width="1400" height="980" alt="Books by Rodrigo Rodriguez" loading="lazy"/>
+      <span class="quad-scrim" aria-hidden="true"></span>
+      <span class="quad-go" aria-hidden="true">&#8599;</span>
+      <span class="quad-body">
+        <span class="quad-num">02</span>
+        <h2 data-i18n="nav.books">Books</h2>
+        <span class="quad-sub" data-i18n="home.quad.books-sub">Press folios, scores and songbooks</span>
+      </span>
+    </a>
+    <a class="quad" href="/astrology">
+      <img src="/images/tile-astrology.jpg" width="1400" height="980" alt="Astrological chart" loading="lazy"/>
+      <span class="quad-scrim" aria-hidden="true"></span>
+      <span class="quad-go" aria-hidden="true">&#8599;</span>
+      <span class="quad-body">
+        <span class="quad-num">03</span>
+        <h2 data-i18n="nav.astrology">Astrology</h2>
+        <span class="quad-sub" data-i18n="home.quad.astrology-sub">Charts, cycles and symbols</span>
+      </span>
+    </a>
+    <a class="quad" href="/software">
+      <img src="/images/tile-code.jpg" width="1400" height="980" alt="Software and code by Rodrigo Rodriguez" loading="lazy"/>
+      <span class="quad-scrim" aria-hidden="true"></span>
+      <span class="quad-go" aria-hidden="true">&#8599;</span>
+      <span class="quad-body">
+        <span class="quad-num">04</span>
+        <h2 data-i18n="nav.code">Code</h2>
+        <span class="quad-sub" data-i18n="home.quad.code-sub">Architecture, General Bots and open source</span>
+      </span>
+    </a>
   </section>
 
-  <section class="section">
+  <section class="section" id="music">
     <div class="container bio-wrap">
       <div class="bio-photo reveal">
         <img src="/images/rod.jpg" width="800" height="1000" alt="Rodrigo Rodriguez playing guitar" loading="lazy"/>
@@ -197,11 +225,10 @@
 </main>
 <div hx-get="/partials/footer.html" hx-swap="innerHTML" hx-trigger="load"></div>
 <script defer src="/js/vendor/htmx.min.js"></script>
-<script defer src="/js/site.js?v=8"></script>
-<script defer src="/js/search.js?v=7"></script><script defer src="/js/vendor/gsap.min.js"></script>
+<script defer src="/js/site.js?v=9"></script>
+<script defer src="/js/search.js?v=8"></script><script defer src="/js/vendor/gsap.min.js"></script>
 <script defer src="/js/vendor/ScrollTrigger.min.js"></script>
 <script defer src="/js/motion.js?v=3"></script>
-<script defer src="/js/starfield.js"></script>
 <script defer src="/js/share.js?v=7"></script><script>if("serviceWorker" in navigator)window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")});</script>
 <button class="to-top" type="button" aria-label="Back to top" data-i18n-aria="a11y.top">&#8593;</button>
 </body>

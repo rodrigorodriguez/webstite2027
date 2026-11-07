@@ -13,7 +13,7 @@ pages = ["/"]
 for f in sorted(os.listdir(".")):
     if f.endswith(".html"):
         pages.append("/" + f)
-for d in ("discography", "books", "artists"):
+for d in ("discography", "books", "artists", "astrology"):
     for f in sorted(os.listdir(d)):
         if f.endswith(".html"):
             pages.append(f"/{d}/{f}")
@@ -33,16 +33,17 @@ JS = """(() => {
     .filter(i => i.complete && i.naturalWidth === 0 && i.src && !i.src.startsWith('data:'))
     .map(i => i.getAttribute('src'));
   const header = !!document.querySelector('.site-header');
-  const navLinks = [...document.querySelectorAll('.nav-desktop > a')].filter(a => a.offsetParent !== null);
+  const navLinks = [...document.querySelectorAll('.nav-desktop > a, .nav-desktop .dropdown-trigger')].filter(a => a.offsetParent !== null);
   const navOk = navLinks.every(a => { const r = a.getBoundingClientRect(); return r.height >= 22 && r.width >= 30; });
   const mobMenu = !!document.querySelector('#mobile-toggle');
+  const home = document.body.classList.contains('page-home');
   const tapTargets = [...document.querySelectorAll('.hero-actions a, .filter-chip, .press-open, .share-btn, .contact-mail')]
     .filter(el => el.offsetParent !== null)
     .filter(el => { const r = el.getBoundingClientRect(); return r.height > 0 && r.height < 26; })
     .length;
   const fontsLoaded = document.fonts ? document.fonts.status : 'na';
   return {
-    overflowX, badImgs, header, navLinks: navLinks.length, navOk, mobMenu,
+    overflowX, badImgs, header, navLinks: navLinks.length, navOk, mobMenu, home,
     tapTargets, fontsLoaded,
     hasH1: !!document.querySelector('h1'),
     lang: de.lang,
@@ -51,7 +52,17 @@ JS = """(() => {
 })()"""
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(args=["--no-sandbox"])
+    # Prefer the bundled Chromium; fall back to the system Chrome when the
+    # Playwright download is not present on this machine.
+    launch = {}
+    if not os.path.exists("/home/%s/.cache/ms-playwright" % os.environ.get("USER", "")) or not os.listdir(
+        os.path.expanduser("~/.cache/ms-playwright")
+    ):
+        launch["executable_path"] = "/usr/bin/google-chrome"
+    try:
+        browser = p.chromium.launch(args=["--no-sandbox"], **launch)
+    except Exception:
+        browser = p.chromium.launch(args=["--no-sandbox"], executable_path="/usr/bin/google-chrome")
     for vp in VIEWPORTS:
         ctx = browser.new_context(
             viewport={"width": vp["width"], "height": vp["height"]},
@@ -71,6 +82,10 @@ with sync_playwright() as p:
             except Exception:
                 page.goto(BASE + u, wait_until="load", timeout=20000)
             page.wait_for_timeout(900)
+            try:  # the header arrives via htmx: wait for it instead of racing it
+                page.wait_for_selector(".site-header", timeout=6000)
+            except Exception:
+                pass
             v = page.evaluate(JS)
             slug = u.strip("/").replace("/", "__").replace(".html", "") or "home"
             page.screenshot(path=f"{OUT}/{vp['name']}__{slug}.jpg", quality=60, type="jpeg", full_page=False)
@@ -79,7 +94,7 @@ with sync_playwright() as p:
             if v["badImgs"]: issues.append("broken imgs: " + ",".join(v["badImgs"][:3]))
             if not v["header"]: issues.append("header missing")
             if v["navLinks"] and not v["navOk"]: issues.append("nav too small")
-            if vp.get("mobile") and not v["mobMenu"]: issues.append("no mobile menu btn")
+            if vp.get("mobile") and not v["mobMenu"] and not v["home"]: issues.append("no mobile menu btn")
             if v["tapTargets"] > 0: issues.append(f"small tap targets: {v['tapTargets']}")
             if not v["hasH1"]: issues.append("no h1")
             if errors: issues.append(f"js errors: {len(errors)}")
